@@ -1,0 +1,12 @@
+﻿#ifndef RESCONTAINER_GLOBAL_H
+#define RESCONTAINER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef RESCONTAINER_LIB
+# define RESCONTAINER_EXPORT Q_DECL_EXPORT
+#else
+# define RESCONTAINER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // RESCONTAINER_GLOBAL_H

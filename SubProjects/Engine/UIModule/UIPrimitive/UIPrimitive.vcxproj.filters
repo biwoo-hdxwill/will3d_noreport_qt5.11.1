@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{926eeec4-2985-4734-841e-10266eb95d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="W3RectItem_rangeMPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3EllipseItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TextItem_otf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3PolygonItem_otf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3LineItem_otf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3EllipseItem_otf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3OTFDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3OTFPolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Curve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3PathItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Spline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TextItem_sequence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TextItem_switch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ImplantButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3WorldAxisItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3FilteredTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3DicomLoaderScrollbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3GuideCrossLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3RectItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3LineItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ArcItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ArrowItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3LabelItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ArrowItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3EllipseItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3PathItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3PolygonItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3RectItem_anno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TextItem_ImplantID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3SpanSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3GuideRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Slider_2DView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3InputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ViewRuler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ProfileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ViewInfoTextItems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ViewAlignTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_arch_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_nerve_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="line_list_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_border_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_orientatoin_roi_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_ruler_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ellipse_mpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pathitem_freedraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3LineItem_MPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="panning_handle_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="guide_line_list_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="text_edit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grid_lines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rotate_line_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_handle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="simple_text_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_text_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoom_3d_cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="direction_text_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="annotation_note.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="annotation_arrow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_degree.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_base.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="annotation_freedraw.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="plotter_module.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_polygon.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_tape.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_length.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_profile.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tmj_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polygon_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmj_arrow_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image_filter_selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_line.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_line_item.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="W3TextItem_otf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3GuideCrossLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uiprimitive_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3ArcItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3ArrowItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="measure_line.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="W3LineItem_MPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3RectItem_rangeMPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3EllipseItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="W3EllipseItem_otf.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="W3LineItem_otf.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="W3PolygonItem_otf.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3TextItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3OTFDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="W3OTFPolygon.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="W3Curve.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3PathItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3Spline.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3TextItem_sequence.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3TextItem_switch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3WorldAxisItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3FilteredTextItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3DicomLoaderScrollbar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3RectItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3LineItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3LabelItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ArrowItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3EllipseItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3PathItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3PolygonItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3RectItem_anno.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3SpanSlider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3TextItem_ImplantID.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="W3GuideRect.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="W3Slider_2DView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3InputDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ViewRuler.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ProfileDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ViewInfoTextItems.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ViewAlignTextItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pano_arch_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pano_nerve_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="line_list_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_border_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pano_orientatoin_roi_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pano_ruler_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pathitem_freedraw.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pannig_handle_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="guide_line_list_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ImplantButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="ellipse_mpr.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="text_edit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="grid_lines.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="rotate_line_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_handle.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="simple_text_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_text_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="zoom_3d_cube.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="direction_text_item.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="measure_tools.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="annotation_note.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+    <CustomBuild Include="annotation_arrow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="measure_degree.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="measure_base.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <QtMoc Include="annotation_freedraw.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+    <QtMoc Include="plotter_module.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+    <QtMoc Include="measure_polygon.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+    <CustomBuild Include="measure_tape.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="measure_length.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <QtMoc Include="measure_profile.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+    <QtMoc Include="tmj_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="polygon_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tmj_arrow_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="slider.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="image_filter_selector.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="profile_line_item.h">
+      <Filter>Tools</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

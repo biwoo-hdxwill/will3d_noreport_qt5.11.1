@@ -1,0 +1,11 @@
+﻿#ifndef UIPRIMITIVE_GLOBAL_H
+#define UIPRIMITIVE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+#ifdef UIPRIMITIVE_LIB
+# define UIPRIMITIVE_EXPORT Q_DECL_EXPORT
+#else
+# define UIPRIMITIVE_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // UIPRIMITIVE_GLOBAL_H

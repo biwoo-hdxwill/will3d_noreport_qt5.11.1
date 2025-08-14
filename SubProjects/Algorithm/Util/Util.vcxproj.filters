@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{516e1365-51b7-478a-a9f7-9b57ff5dc936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dirent">
+      <UniqueIdentifier>{788f52e2-7ee6-4738-bd53-f9ccfe47b890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{4129783e-a74a-4f5b-92e8-ce00e2679aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GPUUtil">
+      <UniqueIdentifier>{452a5cfd-3ec4-401a-b22e-94d2ae705e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KnnWrapper">
+      <UniqueIdentifier>{1257a1bc-52b6-49ec-93c7-dbd25c2b935d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MeshGenerator">
+      <UniqueIdentifier>{088a3b4e-67e7-46af-a430-2ac74b7ac83b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PointProcessing">
+      <UniqueIdentifier>{5625a54d-9f5e-4c79-8854-98825aca0e29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rlutil">
+      <UniqueIdentifier>{ad3540c4-e3c7-4d82-89d5-09b7e0cb19e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TetrahedronProcessing">
+      <UniqueIdentifier>{17cba962-7b87-4f13-9ddf-93642d56204b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\coutOverloading.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\IOParser_v3.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Logger.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\PlyIO.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RegexHelper.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\CylinderSystem.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUUtil\clsparse_global_setting.cpp">
+      <Filter>Source Files\GPUUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUUtil\opencl_global_setting.cpp">
+      <Filter>Source Files\GPUUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="KnnWrapper\KnnWrapper.cpp">
+      <Filter>Source Files\KnnWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshGenerator\CylinderMeshGenerator.cpp">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshGenerator\MeshCompacter.cpp">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshGenerator\MeshGenerator.cpp">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrahedronProcessing\EdgeTetraMapper.cpp">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrahedronProcessing\VertEdgeMapper.cpp">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrahedronProcessing\VertTetraMapper.cpp">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="PointProcessing\Edge.cpp">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="PointProcessing\EdgeToTriIdxMapper.cpp">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="PointProcessing\VertexToTriIdxMapper.cpp">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="PointProcessing\XFormMaker.cpp">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\coutOverloading.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IOParser_v3.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Logger.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\path_global_setting.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PlyIO.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RegexHelper.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\typeDef.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\util_global.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\util_preprocessing.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent\dirent.h">
+      <Filter>Source Files\dirent</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\CylinderSystem.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUUtil\clsparse_global_setting.h">
+      <Filter>Source Files\GPUUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUUtil\opencl_global_setting.h">
+      <Filter>Source Files\GPUUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUUtil\opencl_kernel_setting.h">
+      <Filter>Source Files\GPUUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="KnnWrapper\KnnWrapper.h">
+      <Filter>Source Files\KnnWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshGenerator\CylinderMeshGenerator.h">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshGenerator\MeshCompacter.h">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshGenerator\MeshGenerator.h">
+      <Filter>Source Files\MeshGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="TetrahedronProcessing\EdgeTetraMapper.h">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TetrahedronProcessing\VertEdgeMapper.h">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TetrahedronProcessing\VertTetraMapper.h">
+      <Filter>Source Files\TetrahedronProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="rlutil\rlutil.h">
+      <Filter>Source Files\rlutil</Filter>
+    </ClInclude>
+    <ClInclude Include="PointProcessing\Edge.h">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="PointProcessing\EdgeToTriIdxMapper.h">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="PointProcessing\VertexToTriIdxMapper.h">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="PointProcessing\XFormMaker.h">
+      <Filter>Source Files\PointProcessing</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

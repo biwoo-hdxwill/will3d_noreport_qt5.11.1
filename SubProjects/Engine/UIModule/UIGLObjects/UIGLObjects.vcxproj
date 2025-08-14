@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Europe|Win32">
+      <Configuration>Debug_Europe</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_Europe|x64">
+      <Configuration>Debug_Europe</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_light|Win32">
+      <Configuration>Debug_light</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_light|x64">
+      <Configuration>Debug_light</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_viewer|Win32">
+      <Configuration>Debug_viewer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_viewer|x64">
+      <Configuration>Debug_viewer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Europe|Win32">
+      <Configuration>Release_Europe</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Europe|x64">
+      <Configuration>Release_Europe</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_light|Win32">
+      <Configuration>Release_light</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_light|x64">
+      <Configuration>Release_light</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_viewer|Win32">
+      <Configuration>Release_viewer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_viewer|x64">
+      <Configuration>Release_viewer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{153F6B9B-0845-4C80-A51A-E9ADFF7D86A2}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Release;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\include;$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib\HDF5\1.10.3_msvc14\lib\Debug;$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtInstall>msvc2017_64</QtInstall>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;opengl;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_EUROPE;UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_VIEWER;UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;W3ProjectIO.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_VIEWER;UNICODE;WIN32;WIN64;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;UIPrimitive.lib;glew32d.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_EUROPE;UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_VIEWER;UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>W3ProjectIO.lib;ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_VIEWER;UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIGLOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;UIPrimitive.lib;glew32.lib;GLfunctions.lib;Common.lib;Resource.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtMoc Include="gl_object.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="gl_widget.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="gl_nerve_widget.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="gl_implant_widget.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="implant_obj_gl.h" />
+    <ClInclude Include="measure_3d_manager.h" />
+    <ClInclude Include="measure_angle_3d.h" />
+    <ClInclude Include="measure_base_3d.h" />
+    <ClInclude Include="measure_length_3d.h" />
+    <ClInclude Include="measure_line_3d.h" />
+    <ClInclude Include="surface_axes_item_geometry.h" />
+    <ClInclude Include="uiglobjects_defines.h" />
+    <ClInclude Include="view_plane_obj_gl.h" />
+    <ClInclude Include="uiglobjects_global.h" />
+    <ClInclude Include="W3GLNerve.h" />
+    <ClInclude Include="W3GLObject.h" />
+    <ClInclude Include="W3SurfaceAngleItem.h" />
+    <ClInclude Include="W3SurfaceArchItem.h" />
+    <ClInclude Include="W3SurfaceAxesItem.h" />
+    <ClInclude Include="W3SurfaceDistanceItem.h" />
+    <ClInclude Include="W3SurfaceEllipseItem.h" />
+    <ClInclude Include="W3SurfaceItem.h" />
+    <ClInclude Include="W3SurfaceLineItem.h" />
+    <ClInclude Include="W3SurfacePlaneItem.h" />
+    <ClInclude Include="W3SurfaceTextEllipseItem.h" />
+    <QtMoc Include="W3SurfaceTextLineItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="W3VBOs.h" />
+    <CustomBuild Include="W3Spline3DItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gl_implant_widget.cpp" />
+    <ClCompile Include="gl_widget.cpp" />
+    <ClCompile Include="gl_nerve_widget.cpp" />
+    <ClCompile Include="implant_obj_gl.cpp" />
+    <ClCompile Include="measure_3d_manager.cpp" />
+    <ClCompile Include="measure_angle_3d.cpp" />
+    <ClCompile Include="measure_base_3d.cpp" />
+    <ClCompile Include="measure_length_3d.cpp" />
+    <ClCompile Include="measure_line_3d.cpp" />
+    <ClCompile Include="surface_axes_item_geometry.cpp" />
+    <ClCompile Include="W3GLNerve.cpp" />
+    <ClCompile Include="W3GLObject.cpp" />
+    <ClCompile Include="gl_object.cpp" />
+    <ClCompile Include="W3Spline3DItem.cpp" />
+    <ClCompile Include="W3SurfaceAngleItem.cpp" />
+    <ClCompile Include="W3SurfaceArchItem.cpp" />
+    <ClCompile Include="W3SurfaceAxesItem.cpp" />
+    <ClCompile Include="W3SurfaceDistanceItem.cpp" />
+    <ClCompile Include="W3SurfaceEllipseItem.cpp" />
+    <ClCompile Include="W3SurfaceItem.cpp" />
+    <ClCompile Include="W3SurfaceLineItem.cpp" />
+    <ClCompile Include="W3SurfacePlaneItem.cpp" />
+    <ClCompile Include="W3SurfaceTextEllipseItem.cpp" />
+    <ClCompile Include="W3SurfaceTextLineItem.cpp" />
+    <ClCompile Include="W3VBOs.cpp" />
+    <ClCompile Include="view_plane_obj_gl.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

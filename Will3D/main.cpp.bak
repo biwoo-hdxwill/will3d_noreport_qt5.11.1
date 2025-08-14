@@ -1,0 +1,239 @@
+#include <QtWidgets/QApplication>
+#include <QCoreApplication>
+#include <QDir>
+#include <QTextCodec>
+#include <QSettings>
+// IPC 170120
+#include <QLocalServer>
+#include <QLocalSocket>
+
+#include <Engine/Common/Common/global_preferences.h>
+#include "../SubProjects/Engine/Common/Common/W3Theme.h"
+#include "../SubProjects/Engine/Common/Common/W3Logger.h"
+#include "../SubProjects/Engine/Common/Common/W3Memory.h"
+#include "SplashScreen.h"
+#if defined(_WIN32)
+#include <Engine/Common/Common/sw_info.h>
+#endif
+
+#include <Engine/Common/Common/language_pack.h>
+
+// smseo : GPU Selection code
+extern "C"
+{
+	__declspec(dllexport) unsigned long NvOptimusEnablement = 0x00000001;
+	__declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1;
+}
+
+int main(int argc, char *argv[])
+{
+	QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+
+#if 1
+#if defined(_WIN32)
+	SetProcessDPIAware();
+	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#endif
+#else
+#if 1
+	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#else
+	QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+#endif
+#endif
+
+#if defined(__APPLE__)
+	QSurfaceFormat format;
+	format.setVersion(4, 1);
+	format.setSamples(4);
+	format.setProfile(QSurfaceFormat::CoreProfile);
+	format.setRenderableType(QSurfaceFormat::OpenGL);
+
+	QSurfaceFormat::setDefaultFormat(format);
+#endif
+
+	QApplication a(argc, argv);
+	QDir::setCurrent(QCoreApplication::applicationDirPath());
+
+	using common::Logger;
+	auto logger = Logger::instance();
+	logger->Init();
+	logger->Print(common::LogType::INF, "  ");
+	logger->Print(common::LogType::INF, "Will3D - start");
+#if defined(_WIN32)
+	sw_info::SWInfo::printSWVersion();
+	sw_info::SWInfo::printCPUInfo();
+	sw_info::SWInfo::printCPUMemoryStatus();
+#endif
+
+	lang::LanguagePack::Init();
+
+	//thyoo 160324
+	CW3Theme::getInstance()->setAppTheme(&a);
+
+	QString readFilePath, outScriptPath, moduleName;
+
+	QTextCodec *codec = QTextCodec::codecForName("eucKR");
+	QTextCodec::setCodecForLocale(codec);
+
+#ifdef _DEBUG
+#ifndef WILL3D_VIEWER
+#if 1
+	readFilePath = codec->toUnicode("F:\\Work\\[00]3DProject\\SampleDCM\\LeeSeungYeol_200x200\\[sample]send_ct_from_willmaster_to_will3d.txt");
+	//readFilePath = codec->toUnicode("G:\\SIDEX02\\read_script.txt");
+	//readFilePath = codec->toUnicode("G:\\오류영상\\산본엘치과_프로젝트_안열림\\20200611154232095_0449\\492920200828180042.w3d");
+	//readFilePath = codec->toUnicode("F:\\Work\\[00]3DProject\\SampleDCM\\3DPhoto_Dicom\\고덕원과장_Dicom\\[sample]send_ct_from_willmaster_to_will3d.txt");
+	//readFilePath = codec->toUnicode("F:\\Work\\[00]3DProject\\SampleDCM\\3DPhoto_Dicom\\고덕원과장_Dicom\\[sample]send_onlytrd_from_willmaster_to_will3d.txt");
+	//readFilePath = codec->toUnicode("F:\\Work\\[00]3DProject\\SampleDCM\\3DPhoto_Dicom\\고덕원과장_Dicom\\[sample]send_ct+trd_from_willmaster_to_will3d.txt");
+	//outScriptPath = codec->toUnicode("C:\\Will-Master\\TempDown\\20180808\\20180813\\CT3D\\ProjectOut-105111.txt");
+	outScriptPath = codec->toUnicode("F:\\20180808-173928_out.txt");
+#endif
+#endif
+#else
+	if (argc == 2)
+	{
+		QString argument = codec->toUnicode(argv[1]);
+		if (argument.contains(".w3d", Qt::CaseInsensitive))	// project file path
+		{
+			readFilePath = argument;
+		}
+	}
+#endif
+
+	for (int i = 0; i < argc; i++)
+	{
+		QString argument = codec->toUnicode(argv[i]);
+
+		QByteArray ba = argument.toLocal8Bit();
+		std::string stdArgument = ba.constData();
+		//printf("%s\r\n", stdArgument.c_str());
+		logger->Print(common::LogType::INF, stdArgument);
+		
+		if (argument.at(0) != '/')
+		{
+			continue;
+		}
+
+		QStringList listArgument = argument.split(':');
+		if (listArgument.size() < 2)
+		{
+			continue;
+		}
+
+		QString command = listArgument.at(0);
+		QString value = argument.right(argument.size() - 1 - command.size());
+		if (command.compare("/read", Qt::CaseInsensitive) == 0)	// ct image list sctipt path
+		{
+			readFilePath = value;
+		}
+		else if (command.compare("/project", Qt::CaseInsensitive) == 0)	// project file path
+		{
+			readFilePath = value;
+		}
+		else if (command.compare("/out", Qt::CaseInsensitive) == 0)	// output file sctipt path
+		{
+			outScriptPath = value;
+		}
+		else if (command.compare("/module", Qt::CaseInsensitive) == 0)	// not use
+		{
+			moduleName = value;
+		}
+	}
+
+	//readFilePath = codec->toUnicode("D:\\_dataset\\master\\20180626-135046.txt");
+	//outScriptPath = codec->toUnicode("D:\\_dataset\\master\\20180626-135046_out.txt");
+
+	FILE* file = nullptr;
+
+	QByteArray baRead = readFilePath.toLocal8Bit();
+	std::string stdReadFilePath = baRead.constData();
+	QByteArray baOut = outScriptPath.toLocal8Bit();
+	std::string stdOutScriptPath = baOut.constData();
+
+	bool result = false;
+#if defined(__APPLE__)
+	file_ = fopen(stdReadFilePath.c_str(), "rt");
+	result = (file_) ? true : false;
+#else
+	result = !fopen_s(&file, stdReadFilePath.c_str(), "rt");
+#endif
+
+	if (!result)
+	{
+		//printf("Read script : %s not found.\r\n", stdReadFilePath.c_str());
+		logger->Print(common::LogType::WRN, std::string("Read script : ") + stdReadFilePath + std::string(" not found."));
+		readFilePath = "";
+		outScriptPath = "";
+	}
+	else
+	{
+		fclose(file);
+
+		result = false;
+#if defined(__APPLE__)
+		file_ = fopen(stdOutScriptPath.c_str(), "rt");
+		result = (file_) ? true : false;
+#else
+		result = !fopen_s(&file, stdOutScriptPath.c_str(), "rt");
+#endif
+
+		if (!result)
+		{
+			//printf("Out script : %s not found.\r\n", stdOutScriptPath.c_str());
+			logger->Print(common::LogType::WRN, std::string("Out script : ") + stdOutScriptPath + std::string(" not found."));
+			outScriptPath = "";
+		}
+		else
+		{
+			fclose(file);
+		}
+	}
+
+	QSettings settings(GlobalPreferences::GetInstance()->ini_path(), QSettings::IniFormat);
+	bool singleton_process = settings.value("PROCESS/singleton", true).toBool();
+
+	if (singleton_process)
+	{
+#if defined(_WIN32)
+		// IPC 170120 send argv to executed will3d
+		HWND hwnd = FindWindow(L"Qt5QWindowIcon", L"Will3D");
+		if (hwnd) // will3d 가 이미 실행중
+		{
+			// 포커스 이동
+			if (argc > 1) // 외부에서 호출 시 이미 실행중인 will3d로 argv만 전달
+			{
+				QLocalSocket *socket = new QLocalSocket();
+
+				socket->abort();
+				socket->connectToServer("Will3D");
+				if (socket->waitForConnected())
+				{
+					QByteArray block;
+					QDataStream out(&block, QIODevice::WriteOnly);
+					out.setVersion(QDataStream::Qt_5_8);
+					out << (unsigned short)0;
+					out << readFilePath;
+					out << outScriptPath;
+					out << moduleName;
+					out << (unsigned short)(block.size() - sizeof(unsigned short));
+
+					socket->write(block);
+					socket->flush();
+				}
+
+				if (socket->waitForBytesWritten())
+				{
+					SAFE_DELETE_OBJECT(socket);
+				}
+			}
+
+			exit(0);
+		}
+#endif
+	}
+
+	CSplashScreen SplashScreen(readFilePath, outScriptPath);
+	SplashScreen.show();
+
+	return a.exec();
+}

@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="pacs">
+      <UniqueIdentifier>{5f527494-903c-44db-a110-aeb78863bd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="W3DicomLoaderThumbnailView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ImplantDBDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3TitleBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ToolHBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ToolVBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3CephCoordSysDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3CephIndicatorBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3CephTracingBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ReportTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ReportThumbnail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ReportToolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ReportWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3OTFPresetDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3SizeGrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_pano_cross_section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_pano_arch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_pano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_implant_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_implant_sagittal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_mpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_mpr_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicom_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="group_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cd_export_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global_preferences_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="capture_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stl_export_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="login_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="user_manager_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="user_list_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="new_user_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="find_username_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="find_password_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicom_info_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file_system_tree_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generate_face_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_lightbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measure_list_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orientation_dlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tab_slot_layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tab_contents_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_tmj_frontal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_tmj_lateral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="about_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_common_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_mpr_view_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_3d_view_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_mpr_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_3d_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_pano_view_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_dialog.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_pano_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_add_server_dialog.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences_pacs_defalut_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences_pacs_server_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="base_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences_general_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences_objects_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences_advanced_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_lightbox_setting_widget.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="button_list_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="custom_implant_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_angle_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_list_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_preference_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="uiframe_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3ReportThumbnail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3SizeGrip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="user_list_item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicom_info_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3ToolVBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="W3DicomLoaderThumbnailView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ImplantDBDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3TitleBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ToolHBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3CephCoordSysDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3CephIndicatorBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3CephTracingBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ReportTextEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ReportToolbar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ReportWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="W3ReportWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="W3OTFPresetDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtRcc Include="..\..\..\..\Will3D\htmls\html_tamplate.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="window_pano_cross_section.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_pano_arch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_pano.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_implant_3d.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_implant_sagittal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_mpr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_plane.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_mpr_3d.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dicom_loader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="group_box.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="cd_export_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="global_preferences_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="capture_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="stl_export_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="login_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="user_manager_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="new_user_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="find_username_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="find_password_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="file_system_tree_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="generate_face_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_lightbox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="measure_list_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="orientation_dlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tab_slot_layout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tab_contents_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_tmj_frontal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="window_tmj_lateral.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="about_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_common_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_mpr_view_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_3d_view_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_mpr_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_3d_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_pano_view_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_dialog.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_pano_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_add_server_dialog.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences_pacs_defalut_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences_pacs_server_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="base_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences_general_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences_objects_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences_advanced_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_lightbox_setting_widget.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="button_list_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_panel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="custom_implant_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_angle_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_list_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_preference_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uiframe_zh.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

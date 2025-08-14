@@ -1,0 +1,12 @@
+﻿#ifndef GLFUNCTIONS_GLOBAL_H
+#define GLFUNCTIONS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef GLFUNCTIONS_LIB
+# define GLFUNCTIONS_EXPORT Q_DECL_EXPORT
+#else
+# define GLFUNCTIONS_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // GLFUNCTIONS_GLOBAL_H

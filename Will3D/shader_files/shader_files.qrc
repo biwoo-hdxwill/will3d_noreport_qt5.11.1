@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/image.frag</file>
+        <file>image/image.vert</file>
+        <file>image/image_windowing.frag</file>
+        <file>image/image_windowing.vert</file>
+        <file>surface/bone_density.frag</file>
+        <file>surface/bone_density.vert</file>
+        <file>surface/pick_with_coord.frag</file>
+        <file>surface/pick_with_coord.vert</file>
+        <file>surface/surface.frag</file>
+        <file>surface/surface.vert</file>
+        <file>volume_raycasting/backface.frag</file>
+        <file>volume_raycasting/backface.vert</file>
+        <file>volume_raycasting/firsthit_ray.frag</file>
+        <file>volume_raycasting/firsthit_ray.vert</file>
+        <file>volume_raycasting/frontface.frag</file>
+        <file>volume_raycasting/frontface.vert</file>
+        <file>volume_raycasting/frontface_final.frag</file>
+        <file>volume_raycasting/frontface_final.vert</file>
+        <file>volume_raycasting/raycasting.frag</file>
+        <file>volume_raycasting/raycasting.vert</file>
+        <file>volume_raycasting/surface_texture.frag</file>
+        <file>volume_raycasting/surface_texture.vert</file>
+        <file>volume_slice/slice.frag</file>
+        <file>volume_slice/slice.vert</file>
+        <file>volume_slice/slice_implant.frag</file>
+        <file>volume_slice/slice_implant.vert</file>
+        <file>volume_slice/slice_nerve.frag</file>
+        <file>volume_slice/slice_nerve.vert</file>
+        <file>volume_raycasting/raycasting_light.frag</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+﻿#ifndef RIGIDPW_GLOBAL_H
+#define RIGIDPW_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef RIGIDPW_LIB
+# define RIGIDPW_EXPORT Q_DECL_EXPORT
+#else
+# define RIGIDPW_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // RIGIDPW_GLOBAL_H

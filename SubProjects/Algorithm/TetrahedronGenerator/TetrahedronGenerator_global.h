@@ -1,0 +1,13 @@
+﻿#ifndef TETRAHEDRONGENERATOR_GLOBAL_H
+#define TETRAHEDRONGENERATOR_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef TETRAHEDRONGENERATOR_LIB
+# define TETRAHEDRONGENERATOR_EXPORT Q_DECL_EXPORT
+#else
+# pragma comment (lib, "TetrahedronGenerator.lib")
+# define TETRAHEDRONGENERATOR_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TETRAHEDRONGENERATOR_GLOBAL_H

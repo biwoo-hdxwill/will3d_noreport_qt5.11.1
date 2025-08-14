@@ -1,0 +1,200 @@
+#include "EigenUtil.h"
+#pragma message("## Util/EigenUtil/EigenUtil.cpp visited")
+#include <exception>
+using namespace std;
+
+void EigenUtil::getSpCoef(
+	std::vector<SparseCoefr>& spCoef,
+	const SparseXr& mat,
+	int rOffset,
+	int cOffset
+){
+	for (int k = 0; k < mat.outerSize(); k++){
+		for (SparseXr::InnerIterator it(mat, k); it; ++it){
+			spCoef.push_back(SparseCoefr(it.row() + rOffset, it.col() + cOffset, it.value()));
+		}
+	}
+}
+
+bool EigenUtil::convert(
+	MatrixXr& eigenMat,
+	const mxArrayWrapper& mxMat
+){
+	//typedef double V;
+#define __code0(V)\
+	try{\
+		if (mxMat.isSparse()){\
+			if (!mxMat.isSparseValid()){\
+				throw exception("sparse matrix only supports double type");\
+			}\
+			mwIndex* irs;\
+			mwIndex* jcs;\
+			mwSize m = mxMat.size(0);\
+			mwSize n = mxMat.size(1);\
+			irs = mxGetIr(mxMat.getPtr());\
+			jcs = mxGetJc(mxMat.getPtr());\
+			V* sr = static_cast<V*>(mxGetData(mxMat.getPtr())); /* real */\
+			/* V* si = static_cast<V>(mxGetImagData(mxMat.getPtr())); // imag */\
+			vector<SparseCoefr> spCoef;\
+			for (int j = 0; j < n; j++){\
+				for (int k = jcs[j]; k < jcs[j + 1]; k++){\
+					int i = irs[k];\
+					V val = sr[k]; /* real */\
+					/* V val = si[k]; // imag */\
+					eigenMat(i, j) = val;\
+				}\
+			}\
+		}\
+		else{\
+			eigenMat = MatrixXr(mxMat.size(0), mxMat.size(1));\
+			V* cur = static_cast<V*>(mxGetData(mxMat.getPtr()));\
+			for (int i = 0; i < mxMat.size(0); i++){\
+				for (int j = 0; j < mxMat.size(1); j++){\
+					vector<mwIndex> idxs = { mwIndex(i), mwIndex(j) };\
+					mwIndex aidx = mxCalcSingleSubscript(mxMat.getPtr(), idxs.size(), idxs.data());\
+					eigenMat(i, j) = cur[aidx];\
+				}\
+			}\
+		}\
+		return true;\
+	}\
+	catch (exception& e){\
+		cout << "EigenUtil::convert: " << e.what() << endl;\
+		return false;\
+	}
+	__switch(mxMat.getClassId(), __code0);
+}
+
+bool EigenUtil::convert(
+	SparseXr& eigenMat,
+	const mxArrayWrapper& mxMat
+){
+	//typedef double V;
+#define __code0(V)\
+	try{\
+		if (mxMat.isSparse()){\
+			if (!mxMat.isSparseValid()){\
+				throw exception("sparse matrix only supports double type");\
+			}\
+			mwIndex* irs;\
+			mwIndex* jcs;\
+			mwSize m = mxMat.size(0);\
+			mwSize n = mxMat.size(1);\
+			irs = mxGetIr(mxMat.getPtr());\
+			jcs = mxGetJc(mxMat.getPtr());\
+			V* sr = static_cast<V*>(mxGetData(mxMat.getPtr())); /* real */\
+			/* V* si = static_cast<V>(mxGetImagData(mxMat.getPtr())); // imag */\
+			vector<SparseCoefr> spCoef;\
+			for (int j = 0; j < n; j++){\
+				for (int k = jcs[j]; k < jcs[j + 1]; k++){\
+					int i = irs[k];\
+					spCoef.push_back(SparseCoefr(i, j, sr[k])); /* real */\
+					/* spCoef.push_back(SparseCoefr(i, j, si[k])); // imag */\
+				}\
+			}\
+			eigenMat.setFromTriplets(spCoef.begin(), spCoef.end());\
+			return true;\
+		}\
+		else{\
+			V* cur = static_cast<V*>(mxGetData(mxMat.getPtr()));\
+			vector<SparseCoefr> spCoefr;\
+			for (int i = 0; i < eigenMat.rows(); i++){\
+				for (int j = 0; j < eigenMat.cols(); j++){\
+					vector<mwIndex> idxs = { mwIndex(i), mwIndex(j) };\
+					mwIndex aidx = mxCalcSingleSubscript(mxMat.getPtr(), idxs.size(), idxs.data());\
+					spCoefr.push_back(SparseCoefr(i, j, cur[aidx]));\
+				}\
+			}\
+			std::sort(spCoefr.begin(), spCoefr.end(), [](const SparseCoefr& c0, const SparseCoefr& c1){\
+				return c0.col() < c1.col() || c0.col() == c1.col() && c0.row() < c1.row();\
+			});\
+			eigenMat.setFromTriplets(spCoefr.begin(), spCoefr.end());\
+		}\
+	}\
+	catch (exception& e){\
+		cout << "EigenUtil::convert: " << e.what() << endl;\
+		return false;\
+	}
+	__switch(mxMat.getClassId(), __code0);
+}
+
+bool EigenUtil::convert(
+	mxArrayWrapper& mxMat,
+	const MatrixXr& eigenMat,
+	const std::string& name
+){
+	typedef double V;
+	try{
+		mxMat = mxArrayWrapper({ mwSize(eigenMat.rows()), mwSize(eigenMat.cols()) }, mxDOUBLE_CLASS, mxREAL, name);
+		V* cur = static_cast<V*>(mxGetData(mxMat.getPtr()));
+		for (int i = 0; i < mxMat.size(0); i++){
+			for (int j = 0; j < mxMat.size(1); j++){
+				vector<mwIndex> idxs = { mwIndex(i), mwIndex(j) };
+				mwIndex aidx = mxCalcSingleSubscript(mxMat.getPtr(), idxs.size(), idxs.data());
+				cout << eigenMat(i, j) << endl;
+				cur[aidx] = eigenMat(i, j);
+			}
+		}
+		return true;
+	}
+	catch (exception& e){
+		cout << "EigenUtil::convert: " << e.what() << endl;
+		return false;
+	}
+}
+
+
+bool EigenUtil::convert(
+	mxArrayWrapper& mxMat,
+	const SparseXr& eigenMat,
+	const std::string& name
+	){
+	typedef double V;
+	try{
+		mxMat = mxArrayWrapper(eigenMat.rows(), eigenMat.cols(), mxREAL, name);
+		vector<SparseCoefr> spCoef;
+		EigenUtil::getSpCoef(spCoef, eigenMat, 0, 0);
+		/* sort for fast assignment */
+		std::sort(spCoef.begin(), spCoef.end(),
+			[](const SparseCoefr& c0, const SparseCoefr& c1)->int{
+			return	c0.col() < c1.col() ||
+				c0.col() == c1.col() && c0.row() < c1.row();
+		}
+		);
+		cout << "#" << "spCoef.size=" << spCoef.size() << endl;
+		//for (const auto& c : spCoef){
+		//	mxMat.atr<V>(c.row(), c.col()) = c.value();
+		//}
+		// use raw construct for fast copy
+		double* sr = mxGetPr(mxMat.getPtr()); // real
+		double* si = mxGetPi(mxMat.getPtr()); // imag
+		mwIndex* irs = mxGetIr(mxMat.getPtr());
+		mwIndex* jcs = mxGetJc(mxMat.getPtr());
+		mwSize nzmax = spCoef.size();
+		mxSetNzmax(mxMat.getPtr(), nzmax);
+		mxSetPr(mxMat.getPtr(), (double*)mxRealloc(sr, nzmax*sizeof(double)));
+		mxSetIr(mxMat.getPtr(), (mwIndex*)mxRealloc(irs, nzmax*sizeof(mwIndex)));
+		sr = mxGetPr(mxMat.getPtr()); // real
+		si = mxGetPi(mxMat.getPtr()); // imag
+		irs = mxGetIr(mxMat.getPtr());
+		int col = 0;
+		jcs[0] = 0;
+		for (int i = 0; i < spCoef.size(); i ++){
+			const auto& c = spCoef[i];
+			while (col < c.col()){
+				jcs[col+1] = i;
+				col ++;
+			}
+			irs[i] = c.row();
+			sr[i] = c.value();
+		}
+		jcs[col + 1] = spCoef.size();
+
+		return true;
+	}
+	catch (exception& e){
+		cout << "EigenUtil::convert: " << e.what() << endl;
+		return false;
+	}
+}
+

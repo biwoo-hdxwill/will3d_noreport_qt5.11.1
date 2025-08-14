@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="base_pano_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ceph_surgery_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ceph_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="clipping_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="common_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="endo_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="face_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mpr_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="nerve_tool_box.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="orientation_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="otf_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pano_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="si_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tmj_task_tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tool_box.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_menu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_menu_bar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="visibility_tool_box.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base_pano_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="visibility_tool_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ceph_surgery_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ceph_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clipping_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="endo_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="face_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mpr_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nerve_tool_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orientation_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="otf_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="si_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmj_task_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_mgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_menu_bar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="datatypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tool_factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tool_mgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uitools_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

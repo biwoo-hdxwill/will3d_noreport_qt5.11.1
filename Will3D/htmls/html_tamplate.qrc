@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/html">
+        <file>template_1x1.html</file>
+        <file>template_1x2.html</file>
+        <file>template_1x3.html</file>
+        <file>template_2x1.html</file>
+        <file>template_2x2.html</file>
+        <file>template_2x3.html</file>
+        <file>template_3x1.html</file>
+        <file>template_3x2.html</file>
+        <file>template_3x3.html</file>
+        <file>2by2_Images.htm</file>
+        <file>1by1_Images.htm</file>
+        <file>3by3_Images.htm</file>
+    </qresource>
+</RCC>

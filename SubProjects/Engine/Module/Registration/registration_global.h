@@ -1,0 +1,12 @@
+﻿#ifndef REGISTRATION_GLOBAL_H
+#define REGISTRATION_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef REGISTRATION_LIB
+# define REGISTRATION_EXPORT Q_DECL_EXPORT
+#else
+# define REGISTRATION_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // REGISTRATION_GLOBAL_H

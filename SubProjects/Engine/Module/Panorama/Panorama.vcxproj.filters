@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="AutoArch">
+      <UniqueIdentifier>{698c77a4-e1e5-46f9-acb7-bfb999bfdac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoCanal">
+      <UniqueIdentifier>{7fabce4c-62c6-4b9b-b1e9-cb0516307bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{89a53d02-928c-4d37-8311-d0a90b4d4f48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoArch\W3AutoArch.cpp">
+      <Filter>AutoArch</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoCanal\AutoCanal.cpp">
+      <Filter>AutoCanal</Filter>
+    </ClCompile>
+    <ClCompile Include="Inc\ConnectedComponent.cpp">
+      <Filter>Inc</Filter>
+    </ClCompile>
+    <ClCompile Include="Inc\VpPathTrackingEx.cpp">
+      <Filter>Inc</Filter>
+    </ClCompile>
+    <ClCompile Include="Inc\VpSegCanalEx.cpp">
+      <Filter>Inc</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pano_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="panorama_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoArch\W3AutoArch.h">
+      <Filter>AutoArch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoCanal\AutoCanal.h">
+      <Filter>AutoCanal</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ConnectedComponent.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VpPathTrackingEx.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VpSegCanalEx.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenCVheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pano_algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pano_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="pano_module.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

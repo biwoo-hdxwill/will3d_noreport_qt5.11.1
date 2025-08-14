@@ -1,0 +1,142 @@
+﻿#include "tab_contents_widget.h"
+
+#include <QTabWidget>
+#include <QVboxLayout>
+#include <QHboxLayout>
+
+#include "../../Common/Common/W3Memory.h"
+#include "../../Common/Common/W3Theme.h"
+#include "../../Common/Common/language_pack.h"
+#include "../../Common/Common/W3LayoutFunctions.h"
+#include "../../Common/Common/event_handler.h"
+#include "../../Common/Common/event_handle_common.h"
+#include "../../Common/Common/global_preferences.h"
+
+#include "tab_slot_layout.h"
+
+TabContentsWidget::TabContentsWidget(QWidget *parent)
+	: QWidget(parent) {
+	this->setObjectName("TabBar");
+	this->setMouseTracking(true);
+	QSizePolicy SizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+	SizePolicy.setHorizontalStretch(0);
+	SizePolicy.setVerticalStretch(0);
+	setSizePolicy(SizePolicy);
+
+	m_pTabWidget = new QTabWidget(this);
+	m_pTabWidget->setTabPosition(QTabWidget::West);
+
+	initTab();
+
+	//thyoo 160324
+	CW3Theme* theme = CW3Theme::getInstance();
+	m_pTabWidget->setStyle(theme->tabWestStyle());
+	m_pTabWidget->setStyleSheet(theme->tabWestStyleSheet());
+
+	m_pTabSlot = new TabSlotLayout(this);
+	m_pMainLayout = new QVBoxLayout(this);
+	m_pMainLayout->addWidget(m_pTabWidget);
+	m_pMainLayout->setMargin(0);
+	m_pMainLayout->setContentsMargins(0, 0, 0, 0);
+	m_pMainLayout->setSpacing(0);
+	this->setLayout(m_pMainLayout);
+	
+
+	m_pTabLayout = new QVBoxLayout();
+	m_pTabWidget->setLayout(m_pTabLayout);
+	m_pTabLayout->setContentsMargins(theme->getTabWestMargins());
+	m_pTabLayout->addWidget(m_pTabSlot);
+
+	connect(m_pTabWidget, SIGNAL(tabBarClicked(int)), this, SLOT(slotMenuClicked(int)));
+
+	const auto& event_common_handler = EventHandler::GetInstance()->GetCommonEventHandle();
+	event_common_handler.ConnectSigSetTabSlotLayout(this, SLOT(slotSetTabSlotLayout(QLayout*)));
+}
+
+TabContentsWidget::~TabContentsWidget() {
+	CW3LayoutFunctions::RemoveWidgetsAll(otf_layout_.get());
+	SAFE_DELETE_OBJECT(m_pMainLayout);
+	SAFE_DELETE_OBJECT(m_pTabSlot);
+}
+void TabContentsWidget::SetOTFWidget(QWidget* widget) {
+	otf_layout_.reset(new QVBoxLayout());
+	otf_layout_->addWidget(widget);
+	m_pTabLayout->addLayout(otf_layout_.get());
+}
+QWidget* TabContentsWidget::GetTabSlotWidget() const {
+	return dynamic_cast<QWidget*>(m_pTabSlot);
+}
+void TabContentsWidget::setTabIdx(TabType eTabType) {
+	if (m_pTabWidget)
+		m_pTabWidget->setCurrentIndex(eTabType);
+}
+
+void TabContentsWidget::slotMenuClicked(int tabIndex) 
+{
+	if (tabIndex == TAB_UNKNOWN)
+		return;
+
+	emit sigChangeTab(static_cast<TabType>(tabIndex));
+}
+void TabContentsWidget::slotSetTabSlotLayout(QLayout* layout) 
+{
+	m_pTabSlot->setViewLayout(layout);
+}
+
+void TabContentsWidget::initTab() 
+{
+	if (m_pTabWidget) 
+	{
+		m_pTabWidget->clear();
+		QList<QWidget*> lstTab;
+		for (int i = 0; i < TAB_END; ++i) 
+		{			
+			if (i == TAB_REPORT)
+			{
+				if (GlobalPreferences::GetInstance()->preferences_.tab.report_tab_hide == false)
+				{
+					lstTab.push_back(new QWidget(this));
+				}
+			}
+			else
+			{
+				lstTab.push_back(new QWidget(this));
+			}
+		}
+#ifndef WILL3D_VIEWER
+		m_pTabWidget->addTab(lstTab[TAB_FILE], lang::LanguagePack::txt_file());
+#endif
+		m_pTabWidget->addTab(lstTab[TAB_MPR], lang::LanguagePack::txt_mpr());
+		m_pTabWidget->addTab(lstTab[TAB_PANORAMA], lang::LanguagePack::txt_panorama());
+//20250210 LIN
+//#ifndef WILL3D_VIEWER
+		m_pTabWidget->addTab(lstTab[TAB_IMPLANT], lang::LanguagePack::txt_implant());
+//#endif
+		m_pTabWidget->addTab(lstTab[TAB_TMJ], lang::LanguagePack::txt_tmj());
+#ifndef WILL3D_LIGHT
+		m_pTabWidget->addTab(lstTab[TAB_3DCEPH], lang::LanguagePack::txt_3d_ceph());
+		m_pTabWidget->addTab(lstTab[TAB_FACESIM], lang::LanguagePack::txt_face_simulation());
+		m_pTabWidget->addTab(lstTab[TAB_SI], lang::LanguagePack::txt_superimposition());
+		m_pTabWidget->addTab(lstTab[TAB_ENDO], lang::LanguagePack::txt_endoscopy());
+#endif
+
+		if (GlobalPreferences::GetInstance()->preferences_.tab.report_tab_hide == false)
+		{
+			m_pTabWidget->addTab(lstTab[TAB_REPORT], lang::LanguagePack::txt_report());
+		}
+
+
+#ifndef WILL3D_VIEWER
+		m_pTabWidget->setCurrentIndex(TAB_FILE);
+#else
+		m_pTabWidget->setCurrentIndex(TAB_MPR);
+#endif
+	}
+}
+
+void TabContentsWidget::setOnlyTRDMode() {
+	if (m_pTabWidget) {
+		m_pTabWidget->clear();
+		m_pTabWidget->addTab(new QWidget(this), lang::LanguagePack::txt_3d_photo());
+	}
+}

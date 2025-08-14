@@ -1,0 +1,243 @@
+#include "W3SItab.h"
+/*=========================================================================
+
+File:			class CW3SItab
+Language:		C++11
+Library:		Qt 5.4.0
+Author:			Hong Jung
+First date:		2015-11-21
+Last modify:	2016-04-22
+
+=========================================================================*/
+#include <qtoolbutton.h>
+
+#include "../../Engine/Common/Common/W3Memory.h"
+#include "../../Engine/Common/Common/W3Logger.h"
+#ifndef WILL3D_VIEWER
+#include "../../Engine/Core/W3ProjectIO/project_io_si.h"
+#endif
+#include <Engine/UIModule/UITools/tool_mgr.h>
+#include <Engine/UIModule/UITools/si_task_tool.h>
+#include <Engine/UIModule/UIFrame/window_plane.h>
+
+#include "W3SIViewMgr.h"
+
+CW3SItab::CW3SItab(CW3VREngine *VREngine, CW3MPREngine *MPRengine,
+				   CW3ResourceContainer *Rcontainer) :
+	m_pgVREngine(VREngine),
+	m_pgMPRengine(MPRengine), m_pgRcontainer(Rcontainer) {
+	task_tool_.reset(new SITaskTool(this));
+	ToolMgr::instance()->SetSITaskTool(task_tool_);
+}
+
+CW3SItab::~CW3SItab() {
+	SAFE_DELETE_OBJECT(m_pSIViewMgr);
+	SAFE_DELETE_OBJECT(m_pLayout);
+}
+#ifndef WILL3D_VIEWER
+void CW3SItab::exportProject(ProjectIOSI & out) {
+	if (!m_pSIViewMgr)
+		return;
+
+	out.InitSITab();
+	out.SaveSecondToFirst(m_secondToFirst);
+	m_pSIViewMgr->exportProject(out);
+}
+
+void CW3SItab::importProject(ProjectIOSI & in) {
+	if (in.IsInit()) {
+		if (!initialized()) {
+			Initialize();
+		}
+		in.LoadSecondToFirst(m_secondToFirst);
+		m_pSIViewMgr->importProject(in);
+	}
+}
+#endif
+void CW3SItab::UpdateVRview(bool is_high_quality) {
+  m_pSIViewMgr->UpdateVRview(is_high_quality);
+}
+
+void CW3SItab::SetCommonToolOnce(const common::CommonToolTypeOnce & type, bool on) {
+	m_pSIViewMgr->SetCommonToolOnce(type, on);
+}
+
+void CW3SItab::SetCommonToolOnOff(const common::CommonToolTypeOnOff & type) {
+	m_pSIViewMgr->SetCommonToolOnOff(type);
+}
+
+void CW3SItab::activate() {
+	m_pSIViewMgr->activate();
+}
+
+void CW3SItab::Initialize() {
+	if (BaseTab::initialized()) {
+		common::Logger::instance()->Print(common::LogType::ERR, "already initialized.");
+		assert(false);
+	}
+
+	window_axial_.reset(new WindowPlane("Axial"));
+	window_sagittal_.reset(new WindowPlane("Sagittal"));
+	window_coronal_.reset(new WindowPlane("Coronal"));
+	window_vr_.reset(new WindowPlane("3D"));
+
+	m_pSIViewMgr = new CW3SIViewMgr(m_pgVREngine, m_pgMPRengine,
+									m_pgRcontainer);
+	SetLayout();
+
+	window_axial_->SetView(m_pSIViewMgr->getView(MPRViewType::AXIAL));
+	window_sagittal_->SetView(m_pSIViewMgr->getView(MPRViewType::SAGITTAL));
+	window_coronal_->SetView(m_pSIViewMgr->getView(MPRViewType::CORONAL));
+	window_vr_->SetView(m_pSIViewMgr->getViewSI());
+
+	connections();
+	BaseTab::set_initialized(true);
+}
+
+void CW3SItab::connections() 
+{
+	connect(task_tool_.get(), &SITaskTool::sigSITask, this, &CW3SItab::slotSITask);
+	connect(task_tool_.get(), &SITaskTool::sigSIVisible, this, &CW3SItab::slotSIVisible);
+
+	connect(m_pSIViewMgr, &CW3SIViewMgr::sigSetTranslateMatSecondVolume, this, &CW3SItab::sigSetTranslateMatSecondVolume);
+	connect(m_pSIViewMgr, &CW3SIViewMgr::sigSetRotateMatSecondVolume, this, &CW3SItab::sigSetRotateMatSecondVolume);
+
+#ifdef WILL3D_EUROPE
+	connect(m_pSIViewMgr, &CW3SIViewMgr::sigShowButtonListDialog, this, &CW3SItab::sigShowButtonListDialog);
+#endif // WILL3D_EUROPE
+}
+
+void CW3SItab::slotSIVisible(const SIVisibleID& visible_id, bool on) {
+	switch (visible_id) {
+	case SIVisibleID::MAIN:
+		m_pSIViewMgr->VisibleMain(on);
+		break;
+	case SIVisibleID::SECOND:
+		m_pSIViewMgr->VisibleSecond(on);
+		break;
+	case SIVisibleID::BOTH:
+		m_pSIViewMgr->VisibleBoth(on);
+		break;
+	default:
+		break;
+	}
+}
+
+void CW3SItab::slotSITask(const SITaskID& task_id) {
+	switch (task_id) {
+	case SITaskID::LOAD_NEW:
+		emit sigLoadSecondVolume();
+		break;
+	case SITaskID::AUTO_REG:
+		m_pSIViewMgr->ResetMatrixToAuto();
+		break;
+	default:
+		break;
+	}
+}
+
+void CW3SItab::SetLayout() {
+	SAFE_DELETE_OBJECT(m_pLayout);
+
+	QVBoxLayout* left_layout = new QVBoxLayout();
+	QHBoxLayout* upper_layout = new QHBoxLayout();
+	m_pLayout = new QVBoxLayout();
+
+	left_layout->setSpacing(kLayoutSpacing);
+	left_layout->addWidget(window_axial_.get());
+	left_layout->setStretch(0, 1);
+	left_layout->addWidget(window_sagittal_.get());
+	left_layout->setStretch(1, 1);
+	left_layout->addWidget(window_coronal_.get());
+	left_layout->setStretch(2, 1);
+
+	upper_layout->setSpacing(kLayoutSpacing);
+	upper_layout->addLayout(left_layout);
+	upper_layout->setStretch(0, 1);
+	upper_layout->addWidget(window_vr_.get());
+	upper_layout->setStretch(1, 2);
+
+	m_pLayout->setSpacing(kLayoutSpacing);
+	m_pLayout->addLayout(upper_layout);
+	m_pLayout->setStretch(0, 1);
+
+	tab_layout_ = m_pLayout;
+}
+
+void CW3SItab::SetVisibleWindows(const bool isVisible) {
+	if (!initialized())
+		return;
+
+	window_axial_->setVisible(isVisible);
+	window_sagittal_->setVisible(isVisible);
+	window_coronal_->setVisible(isVisible);
+	window_vr_->setVisible(isVisible);
+
+	m_pSIViewMgr->setVisible(isVisible);
+}
+
+void CW3SItab::setSecVolume(const glm::mat4& secondToFirst) {
+	m_secondToFirst = secondToFirst;
+
+	m_pSIViewMgr->drawSecond(m_secondToFirst);
+	task_tool_->SetEnableSecondVolume(true);
+}
+
+void CW3SItab::setSecVolume() {
+	setSecVolume(m_secondToFirst);
+}
+
+QStringList CW3SItab::GetViewList() {
+	return QStringList{
+		window_axial_.get()->window_title(),
+		window_sagittal_.get()->window_title(),
+		window_coronal_.get()->window_title(),
+		window_vr_.get()->window_title()
+	};
+}
+
+QImage CW3SItab::GetScreenshot(int view_type) {
+	QWidget* source = GetScreenshotSource(view_type);
+
+	return BaseTab::GetScreenshot(source);
+}
+
+QWidget* CW3SItab::GetScreenshotSource(int view_type)
+{
+	QWidget* source = nullptr;
+
+	switch (view_type)
+	{
+	case 1:
+		source = window_axial_.get();
+		break;
+	case 2:
+		source = window_sagittal_.get();
+		break;
+	case 3:
+		source = window_coronal_.get();
+		break;
+	case 4:
+		source = window_vr_.get();
+		break;
+	}
+
+	return source;
+}
+
+void CW3SItab::DeleteMeasureUI(const common::ViewTypeID & view_type,
+							   const unsigned int & measure_id) {
+	m_pSIViewMgr->DeleteMeasureUI(view_type, measure_id);
+}
+
+void CW3SItab::ApplyPreferences() {
+	if (m_pSIViewMgr)
+		m_pSIViewMgr->ApplyPreferences();
+}
+
+#ifdef WILL3D_EUROPE
+void CW3SItab::SyncControlButtonOut()
+{
+	m_pSIViewMgr->SetSyncControlButtonOut();
+}
+#endif // WILL3D_EUROPE

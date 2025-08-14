@@ -1,0 +1,12 @@
+﻿#ifndef W3CDVIEWERIO_GLOBAL_H
+#define W3CDVIEWERIO_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef W3CDVIEWERIO_LIB
+# define W3CDVIEWERIO_EXPORT Q_DECL_EXPORT
+#else
+# define W3CDVIEWERIO_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // W3CDVIEWERIO_GLOBAL_H

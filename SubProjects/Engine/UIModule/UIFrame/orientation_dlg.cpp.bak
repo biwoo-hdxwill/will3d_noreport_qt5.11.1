@@ -1,0 +1,190 @@
+﻿#include "orientation_dlg.h"
+
+#include <qspinbox.h>
+#include <QToolButton>
+#include <QLayout>
+#include <QLabel>
+
+#include "../../Common/Common/color_will3d.h"
+#include "../../Common/Common/language_pack.h"
+#include "../../Common/Common/W3Style.h"
+#include "../../Common/Common/W3Theme.h"
+#include "../../Common/Common/W3LayoutFunctions.h"
+
+OrientationDlg::OrientationDlg(QWidget * parent)
+	: CW3Dialog(tr("Orientation"), parent), grid_on_(new QToolButton) {
+
+	spin_.rotate_a.reset(new QSpinBox);
+	spin_.rotate_a->setVisible(false);
+	SetSpinBoxParams(spin_.rotate_a.get());
+
+	spin_.rotate_i.reset(new QSpinBox);
+	spin_.rotate_i->setVisible(false);
+	SetSpinBoxParams(spin_.rotate_i.get());
+
+	spin_.rotate_r.reset(new QSpinBox);
+	spin_.rotate_r->setVisible(false);
+	SetSpinBoxParams(spin_.rotate_r.get());
+	hide();
+
+}
+
+OrientationDlg::~OrientationDlg() {
+	CW3LayoutFunctions::RemoveWidgetsAll(view_layout_.get());
+}
+void OrientationDlg::SetView(QWidget * orien_view_a,
+								 QWidget * orien_view_r,
+								 QWidget * orien_view_i) {
+	orien_view_a->setFixedSize(300, 310);
+	orien_view_r->setFixedSize(300, 310);
+	orien_view_i->setFixedSize(300, 310);
+
+	QVBoxLayout* layout_orien_a = SetLayoutOrienA(orien_view_a);
+	QVBoxLayout* layout_orien_r = SetLayoutOrienR(orien_view_r);
+	QVBoxLayout* layout_orien_i = SetLayoutOrienI(orien_view_i);
+
+	view_layout_.reset(new QHBoxLayout());
+	view_layout_->setSpacing(5);
+	view_layout_->setContentsMargins(15, 10, 15, 5);
+	view_layout_->addLayout(layout_orien_r);
+	view_layout_->addLayout(layout_orien_a);
+	view_layout_->addLayout(layout_orien_i);
+
+	QHBoxLayout* command_layout = new QHBoxLayout();
+	command_layout->setContentsMargins(15, 5, 15, 10);
+	command_layout->setSpacing(5);
+	command_layout->setAlignment(Qt::AlignCenter);
+	set_default_.reset(new QToolButton());
+	set_default_->setMinimumWidth(150);
+	set_default_->setText(lang::LanguagePack::txt_set_current_as_default());
+	set_default_->setVisible(false);
+	reset_.reset(new QToolButton());
+	reset_->setText(lang::LanguagePack::txt_reset());
+	reset_->setMinimumWidth(150);
+	reset_->setVisible(false);
+	command_layout->addWidget(set_default_.get());
+	command_layout->addWidget(reset_.get());
+
+	m_contentLayout->addLayout(view_layout_.get());
+	m_contentLayout->addLayout(command_layout);
+
+	connect(set_default_.get(), SIGNAL(clicked()), this, SLOT(slotClickedSetDefault()));
+	connect(reset_.get(), SIGNAL(clicked()), this, SLOT(slotClickedReset()));
+	connect(grid_on_.get(), SIGNAL(toggled(bool)), this, SLOT(slotGridOnOff(bool)));
+}
+
+void OrientationDlg::SetSpinBoxParams(QSpinBox* spin_box) {
+	spin_box->setRange(-180, 180);
+	spin_box->setSingleStep(1);
+	spin_box->setValue(0);
+	spin_box->setSuffix(QString::fromLocal8Bit("°"));
+	spin_box->setObjectName(lang::LanguagePack::txt_rotate());
+	spin_box->setAlignment(Qt::AlignCenter);
+	spin_box->setFixedSize(90, 17);
+	spin_box->setStyle(new ViewSpinBoxStyle);
+	spin_box->setStyleSheet(CW3Theme::getInstance()->ViewSpinBoxStyleSheet());
+}
+
+QVBoxLayout* OrientationDlg::SetLayoutOrienA(QWidget* orien_view_a) {
+
+	QLabel* text = CreateLabel(lang::LanguagePack::txt_rotate() + " : ");
+
+	QHBoxLayout* menu_layout = new QHBoxLayout();
+	menu_layout->setAlignment(Qt::AlignLeft);
+	menu_layout->addWidget(text);
+	menu_layout->addWidget(spin_.rotate_a.get());
+
+	QVBoxLayout* layout = new QVBoxLayout();
+	layout->setSpacing(3);
+	layout->addLayout(menu_layout);
+	layout->addWidget(orien_view_a);
+
+	return layout;
+}
+
+QVBoxLayout* OrientationDlg::SetLayoutOrienR(QWidget* orien_view_r) {
+	QLabel* text = CreateLabel(lang::LanguagePack::txt_rotate() + " : ");
+
+	QHBoxLayout* menu_layout = new QHBoxLayout();
+	menu_layout->setAlignment(Qt::AlignLeft);
+	menu_layout->addWidget(text);
+	menu_layout->addWidget(spin_.rotate_r.get());
+
+	QVBoxLayout* layout = new QVBoxLayout();
+	layout->setSpacing(3);
+	layout->addLayout(menu_layout);
+	layout->addWidget(orien_view_r);
+	return layout;
+}
+
+QVBoxLayout* OrientationDlg::SetLayoutOrienI(QWidget* orien_view_i) {
+	grid_on_->setObjectName("ViewMenubarButton");
+	grid_on_->setStyleSheet(
+		CW3Theme::getInstance()->ViewMenuBarOnOffSwitchStyleSheet(
+			ColorGeneral::kBackground, switch_icon_path_.at(0)));
+	grid_on_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+	grid_on_->setFixedSize(50, 20);
+	grid_on_->setCheckable(true);
+
+	QLabel* text = CreateLabel(lang::LanguagePack::txt_rotate() + " : ");
+
+	QHBoxLayout* menu_layout = new QHBoxLayout();
+	menu_layout->setAlignment(Qt::AlignLeft);
+	menu_layout->addWidget(text);
+	menu_layout->addWidget(spin_.rotate_i.get());
+	menu_layout->addItem(new QSpacerItem(5, 5,
+										 QSizePolicy::Expanding,
+										 QSizePolicy::Minimum));
+	menu_layout->addWidget(grid_on_.get());
+
+	QVBoxLayout* layout = new QVBoxLayout();
+	layout->setSpacing(3);
+	layout->addLayout(menu_layout);
+	layout->addWidget(orien_view_i);
+	return layout;
+}
+
+QLabel* OrientationDlg::CreateLabel(const QString& text) {
+	QLabel* label = new QLabel();
+	label->setContentsMargins(0, 0, 0, 0);
+	label->setMinimumHeight(20);
+	label->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
+	label->setText(text);
+
+	return label;
+}
+void OrientationDlg::slotClickedSetDefault() {
+	this->done(true);
+}
+void OrientationDlg::slotClickedReset() {
+	emit sigResetOrientation();
+
+	//this->hide();
+}
+
+void OrientationDlg::slotGridOnOff(bool on) {
+	if (on)
+		grid_on_->setStyleSheet(
+			CW3Theme::getInstance()->ViewMenuBarOnOffSwitchStyleSheet(
+				ColorGeneral::kBackground, switch_icon_path_.at(1)));
+	else
+		grid_on_->setStyleSheet(
+			CW3Theme::getInstance()->ViewMenuBarOnOffSwitchStyleSheet(
+				ColorGeneral::kBackground, switch_icon_path_.at(0)));
+	// toggle on 되었을 떄 grid off 해야 함. 기본 상태가 clipping on 임
+	emit sigGridOnOff(!on);
+}
+
+void OrientationDlg::done(int r) {
+	CW3Dialog::done(r);
+	CW3LayoutFunctions::setVisibleWidgets(m_contentLayout, false);
+}
+
+bool OrientationDlg::IsGridOn() const {
+  return !grid_on_->isChecked();
+}
+
+int OrientationDlg::exec() {
+	CW3LayoutFunctions::setVisibleWidgets(m_contentLayout, true);
+	return CW3Dialog::exec();
+}

@@ -1,0 +1,356 @@
+﻿#include "W3Style.h"
+#include <math.h>
+#include <QTabBar>
+#include <QStyleOption>
+#include <QDebug>
+#include <qsettings.h>
+#include <qtextcodec.h>
+#include "language_pack.h"
+
+void CW3TabWestStyle::drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
+	const QString &text, QPalette::ColorRole textRole) const {
+	if (dynamic_cast<QTabBar*>(painter->device())) {
+		painter->save();
+		{
+			painter->translate(3, -(float)(rect.width())*0.35f);
+			painter->translate((float)(rect.width())*0.5f, (float)(rect.height())*0.5f);
+			painter->rotate(90);
+			painter->translate(-(float)(rect.width())*0.5f, -(float)(rect.height())*0.5f);
+			QRect r = rect.adjusted(0, 0, rect.height()*0.5f, 0);
+
+			QFont font = painter->font();
+
+			QSettings settings("Will3D.ini", QSettings::IniFormat);
+			settings.setIniCodec(QTextCodec::codecForName("UTF-8"));
+			int language_key = settings.value("INTERFACE/language").toInt();
+		
+			if (language_key == LanguageID::JA)
+			{
+				font.setPixelSize(11);
+
+				if(text== lang::LanguagePack::txt_face_simulation())
+					font.setPixelSize(9);
+
+				painter->setFont(font);
+				r = rect.adjusted(-6, 0, rect.height(), 0);
+			}
+			
+			if (textRole == QPalette::WindowText &&
+				pal.color(QPalette::WindowText) == Qt::white) //text shadow
+			{
+				QPalette palShadow(pal);
+				palShadow.setColor(QPalette::WindowText, QColor(0, 0, 0, 100));
+				QProxyStyle::drawItemText(painter, r.adjusted(2, 2, 2, 2), Qt::AlignVCenter, palShadow, enabled, text, textRole);
+				QProxyStyle::drawItemText(painter, r, Qt::AlignVCenter, pal, enabled, text, textRole);
+			} else
+				QProxyStyle::drawItemText(painter, r, Qt::AlignVCenter, pal, enabled, text, textRole);
+		}
+		painter->restore();
+	} else {
+		QProxyStyle::drawItemText(painter, rect, flags, pal, enabled, text, textRole);
+	}
+}
+
+void CW3ToolIconButtonStyle::drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
+	const QString &text, QPalette::ColorRole textRole) const {
+	painter->save();
+
+	if(textRole != QPalette::ToolTipText)
+		painter->translate(0, rect.height()*0.3f);
+
+	QProxyStyle::drawItemText(painter, rect, flags, pal, enabled, text, textRole);
+
+	painter->restore();
+}
+
+void CW3ToolTaskStyle::drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
+	const QString &text, QPalette::ColorRole textRole) const {
+	QStringList strSplitList = text.split("\n");
+
+	if (strSplitList.size() == 2) {
+		//drawn upperText
+		painter->save();
+		{
+			QString uppperText = strSplitList[0];
+			QFont font = painter->font();
+			font.setBold(true);
+			font.setPixelSize(font.pixelSize());
+			painter->setFont(font);
+			//width를 55로 고정해 놓은 이유는 아이콘 크기 때문.
+			painter->translate(55.0f, -(float)(rect.height())*0.17f);
+			QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, uppperText, textRole);
+		}
+		painter->restore();
+
+		//drawn lowerText
+		painter->save();
+		{
+			QString lowerText = strSplitList[1];
+			QFont font = painter->font();
+			font.setLetterSpacing(QFont::AbsoluteSpacing, -0.35f);
+			font.setPixelSize(font.pixelSize() - 1);
+			painter->setFont(font);
+			painter->translate(65.0f, (float)(rect.height())*0.17f);
+			QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, lowerText, textRole);
+		}
+		painter->restore();
+	} else {
+
+		painter->save();
+		{
+			QFont font = painter->font();
+			font.setBold(true);
+			font.setPixelSize(font.pixelSize());
+			painter->setFont(font);
+			painter->translate(65.0f, 0);
+			QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, text, textRole);
+		}
+		painter->restore();
+
+	}
+		
+}
+
+void CW3CephTracingTaskToolStyle::drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
+	const QString &text, QPalette::ColorRole textRole) const {
+	painter->save();
+	{
+		painter->translate((float)(rect.width())*0.22f, 0.0f);
+		QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, text, textRole);
+	}
+	painter->restore();
+}
+void CW3CephIndicatorTabStyle::drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
+	const QString &text, QPalette::ColorRole textRole) const {
+	QStringList strSplitList = text.split("\n");
+
+	if (strSplitList.size() > 1) {
+		painter->save();
+		if (m_style == ANALYSIS && strSplitList.size() == 4)
+		{
+
+			float value = strSplitList[1].toFloat();
+			float mean = strSplitList[2].toFloat();
+			float sd = strSplitList[3].toFloat();
+
+			QPixmap pixmap(100, 1);
+			QPainter painterPix(&pixmap);
+
+			//QLinearGradient gradient(0, 0, 100, 0);
+			//gradient.setColorAt(0.0, QColor("#FFFFFE85"));
+			//gradient.setColorAt(0.1, QColor("#FFFFFE85"));
+			//gradient.setColorAt(0.2, QColor("#FF85DA85"));
+			//gradient.setColorAt(0.4, QColor("#FFFF8785"));
+			//gradient.setColorAt(1, QColor("#FFB50B0B"));
+			//painterPix.fillRect(pixmap.rect(), gradient);
+
+			QLinearGradient gradient(0, 0, 100, 0);
+			gradient.setColorAt(0.0, QColor("#FF85DA85"));
+			gradient.setColorAt(0.1, QColor("#FF85DA85"));
+			gradient.setColorAt(0.2, QColor("#FFFE85"));
+			gradient.setColorAt(0.4, QColor("#FFFF8785"));
+			gradient.setColorAt(1, QColor("#FFB50B0B"));
+			painterPix.fillRect(pixmap.rect(), gradient);
+
+			QImage gradImg = pixmap.toImage();
+
+			QPen normalPen = painter->pen();
+			//QPen redPen = normalPen;
+			//redPen.setColor("#FFFD5050");
+			//QPen orangePen = normalPen;
+			//orangePen.setColor("#FFFD8D50");
+			//QPen greenPen = normalPen;
+			//greenPen.setColor("#FF84D93F");
+
+			for (int i = 0; i < strSplitList.size(); i++)
+			{
+				if (i == 1)
+				{
+					//if (value <= mean - sd*2.5f || value >= mean + sd*2.5f)
+					//{
+					//	painter->setPen(redPen);
+					//}
+					//else if (value <= mean - sd || value >= mean + sd)
+					//{
+					//	painter->setPen(orangePen);
+					//}
+					//else
+					//{
+					//	painter->setPen(greenPen);
+					//}
+
+					float ratio = fabs(value - mean) / (sd * 6);
+					int grdIdx = static_cast<int>(99 * ratio);
+					grdIdx = (grdIdx > 99) ? 99 : grdIdx;
+					grdIdx = (grdIdx < 0) ? 0 : grdIdx;
+
+					painter->setPen(gradImg.pixel(grdIdx, 0));
+				} else
+					painter->setPen(normalPen);
+
+				QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, strSplitList[i]);
+
+				if (m_columnWidth.find(i) != m_columnWidth.end())
+					painter->translate(m_columnWidth.at(i), 0.0f);
+			}
+		} else {
+			QPen pen = painter->pen();
+
+			if (m_style == LANDMARK) {
+				pen.setColor("#FF9DC7FF");
+			} else if (m_style == MEASUREMENT) {
+				pen.setColor("#FFFFF58A");
+			} else if (m_style == REFERENCE) {
+				pen.setColor("#FFFF8A8A");
+			}
+			painter->setPen(pen);
+
+			for (int i = 0; i < strSplitList.size(); i++)
+			{
+				QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, strSplitList[i]);
+
+				if (m_columnWidth.find(i) != m_columnWidth.end())
+					painter->translate(m_columnWidth.at(i), 0.0f);
+			}
+		}
+
+		painter->restore();
+	} else {
+		painter->save();
+		{
+			QProxyStyle::drawItemText(painter, rect, Qt::AlignVCenter, pal, enabled, text, textRole);
+		}
+		painter->restore();
+	}
+}
+
+void ViewSpinBoxStyle::drawPrimitive(PrimitiveElement element, const QStyleOption *option,
+									 QPainter *painter, const QWidget *widget) const {
+	if (element == PE_IndicatorSpinUp || element == PE_IndicatorSpinDown) {
+		QPolygonF points(3);
+
+		float x = (float)option->rect.x();
+		float y = (float)option->rect.y();
+		float w = (float)option->rect.width();
+		float h = (float)option->rect.height();
+		x += (option->rect.width() - w) *0.5f;
+		y += (option->rect.height() - h) *0.5f;
+
+		if (element == PE_IndicatorSpinUp) {
+			y += 1;
+			points[0] = QPoint(x, y + h);
+			points[1] = QPoint(x + w, y + h);
+			points[2] = QPoint(x + w *0.5f, y);
+		} else { // PE_SpinBoxDown
+			y += 2;
+			points[0] = QPoint(x, y);
+			points[1] = QPoint(x + w, y);
+			points[2] = QPoint(x + w *0.5f, y + h);
+		}
+
+		painter->save();
+		if (option->state & (State_On | State_Sunken)) {
+			painter->setPen(QColor(Qt::black));
+			painter->setBrush(QColor(Qt::black));
+		} else {
+			painter->setPen(QColor(Qt::white));
+			painter->setBrush(QColor(Qt::white));
+		}
+		painter->drawPolygon(points);
+		painter->restore();
+	} else {
+		QProxyStyle::drawPrimitive(element, option, painter, widget);
+	}
+}
+
+QRect ViewSpinBoxStyle::subControlRect(ComplexControl cc, const QStyleOptionComplex * option, SubControl sc, const QWidget * widget) const {
+	if (cc == CC_SpinBox) {
+		int frame_width = pixelMetric(PM_DefaultFrameWidth, option, widget);
+		int button_size = 14;
+		QRect rect = QProxyStyle::subControlRect(cc, option, sc, widget);
+
+		switch (sc) {
+			case SC_SpinBoxUp:
+				return visualRect(option->direction, option->rect,
+								  QRect(rect.right() - button_size * 2 - 1, 0,
+								  button_size,
+								  option->rect.height() - 1));
+			case SC_SpinBoxDown:
+				return visualRect(option->direction, option->rect,
+								  QRect(rect.right() - button_size + 1, 0,
+								  button_size,
+								  option->rect.height() - 1));
+			case SC_SpinBoxFrame:
+				return rect;
+			case SC_SpinBoxEditField:
+				return option->rect.adjusted(frame_width, frame_width, -button_size * 2 - 3, -frame_width);
+		}
+	}
+
+	return QProxyStyle::subControlRect(cc, option, sc, widget);
+}
+
+void ViewSpinBoxStyle::drawComplexControl(ComplexControl which, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget) const {
+	if (which == CC_SpinBox) {
+		drawSpinButton(SC_SpinBoxDown, option, painter, widget);
+		drawSpinButton(SC_SpinBoxUp, option, painter, widget);
+		drawSpinButton(SC_SpinBoxFrame, option, painter, widget);
+	} else
+		return QProxyStyle::drawComplexControl(which, option, painter, widget);
+}
+
+void ViewSpinBoxStyle::drawSpinButton(SubControl which, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget) const {
+	QRect button_rect = option->rect;
+
+	if (which == SC_SpinBoxFrame) {
+		painter->setPen(QPen(Qt::black, 1));
+
+		int frame_width = pixelMetric(PM_DefaultFrameWidth, option, widget);
+		QRect sub_rect = subControlRect(CC_SpinBox, option, which, widget);
+		sub_rect.adjust(0, 0, 0, -frame_width);
+		painter->drawRect(sub_rect);
+		return;
+	}
+	PrimitiveElement arrow = PE_IndicatorSpinDown;
+	if ((which == SC_SpinBoxUp)
+		!= (option->direction == Qt::LayoutDirection::RightToLeft)) {
+		arrow = PE_IndicatorSpinUp;
+	}
+	
+	button_rect.translate(button_rect.width() / 2, 0);
+	button_rect.setWidth((button_rect.width() + 1) / 2);
+
+	QStyleOption button_opt(*option);
+
+	painter->save();
+	painter->setClipRect(button_rect, Qt::IntersectClip);
+	if (!(option->activeSubControls & which))
+		button_opt.state &= ~(State_MouseOver | State_On | State_Sunken);
+
+	QRect sub_rect = subControlRect(CC_SpinBox, option, which, widget);
+
+	if (which == SC_SpinBoxUp) {
+		painter->setPen(QPen(QColor(Qt::white), 1));
+		QPoint p1 = sub_rect.topRight() + QPoint(2, 0);
+		QPoint p2 = sub_rect.bottomRight() + QPoint(2, 1);
+		painter->drawLine(p1, p2);
+
+		painter->setPen(QPen(QColor(Qt::black), 1));
+		painter->drawPoint(p1);
+		painter->drawPoint(p2);
+	}
+
+	painter->setPen(QPen(QColor(Qt::black), 1));
+	painter->setBrush(QColor(67, 73, 97));
+	painter->drawRect(sub_rect);
+
+
+	QStyleOption arrow_opt(button_opt);
+	arrow_opt.rect = sub_rect.adjusted(4, 5, -4, -6);
+
+	painter->setRenderHint(QPainter::Antialiasing);
+	if (arrow_opt.rect.isValid())
+		drawPrimitive(arrow, &arrow_opt, painter, widget);
+
+	painter->restore();
+}

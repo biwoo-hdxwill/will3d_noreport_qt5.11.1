@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Point">
+      <UniqueIdentifier>{e837cfb8-adf0-4508-9a07-b5b7fca966e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{183cfd8a-2db3-42d9-8738-c7cf9e5bd114}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3coutOverloading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io_stl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ElementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3MessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Theme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3LayoutFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="language_pack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Cursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global_preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Point3D.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="W3Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="will3d_id_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="event_handler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="event_sender_measure.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="event_handle_measure.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="event_sender_common.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="event_handle_common.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="sw_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="color_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w3_struct.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windows_bit_check.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="large_address_aware_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Enum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Point3D.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+    <ClInclude Include="W3coutOverloading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="io_stl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3ElementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Theme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3LayoutFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W3Cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="color_will3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="global_preferences.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_pano.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_otf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="will3d_id_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_measure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_tmj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="define_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sw_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="large_address_aware_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows_bit_check.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="W3Dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3MessageBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3Style.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtRcc Include="..\..\..\..\Will3D\Images\image.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="..\..\..\..\Will3D\Font\font.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="..\..\..\..\Will3D\Images\cursor\cursor.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="W3ProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="language_pack.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtRcc Include="..\..\..\..\Will3D\Resources\STL\stl.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="event_handler.h">
+      <Filter>Event</Filter>
+    </QtMoc>
+    <QtMoc Include="event_sender_measure.h">
+      <Filter>Event</Filter>
+    </QtMoc>
+    <QtMoc Include="event_handle_measure.h">
+      <Filter>Event</Filter>
+    </QtMoc>
+    <QtMoc Include="event_sender_common.h">
+      <Filter>Event</Filter>
+    </QtMoc>
+    <QtMoc Include="event_handle_common.h">
+      <Filter>Event</Filter>
+    </QtMoc>
+    <QtMoc Include="color_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="common_zh_cn.ts">
+      <Filter>Translation Files</Filter>
+    </QtTranslation>
+    <QtTranslation Include="common_zh_tw.ts">
+      <Filter>Translation Files</Filter>
+    </QtTranslation>
+    <QtTranslation Include="common_ru.ts">
+      <Filter>Translation Files</Filter>
+    </QtTranslation>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="pacs">
+      <UniqueIdentifier>{9ccdba9a-a456-430e-93e5-e62ed86f80b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="uiviewcontroller_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="base_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_pano3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_pano_vr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_slice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_basic_vr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_pano_orientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uiviewcontroller_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_face3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="surface_items.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controler_implant3d_pano.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_orientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_tmj3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_roi_vr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform_implant_3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pacs_view_controller.h">
+      <Filter>pacs</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_pacs_3d.h">
+      <Filter>pacs</Filter>
+    </ClInclude>
+    <ClInclude Include="view_controller_pacs_image.h">
+      <Filter>pacs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base_view_controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_slice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_render_param.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_pano3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_pano_vr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_slice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_basic_vr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_pano_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_navigator_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_face3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_implant3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_controller_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="surface_items.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_bone_density.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_implant3d_pano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_tmj3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_roi_vr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transform_implant_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_pacs_3d.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_view_controller.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="view_controller_pacs_image.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="view_controller_slice.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view_render_param.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="base_view_controller.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view_controller_image.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="view_navigator_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="view_controller_implant3d.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="base_view_controller_3d.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view_controller_bone_density.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

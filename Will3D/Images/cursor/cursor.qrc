@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/cursor">
+        <file>closedhand.png</file>
+        <file>cross.png</file>
+        <file>forbidden.png</file>
+        <file>ibeam.png</file>
+        <file>left_prt.png</file>
+        <file>openhand.png</file>
+        <file>point.png</file>
+        <file>pointinghand.png</file>
+        <file>rotate.png</file>
+        <file>size_all.png</file>
+        <file>size_bdiag.png</file>
+        <file>size_fdiag.png</file>
+        <file>size_hor.png</file>
+        <file>size_ver.png</file>
+        <file>split_h.png</file>
+        <file>split_v.png</file>
+        <file>wait.png</file>
+        <file>zoom.png</file>
+        <file>zoomin.png</file>
+        <file>zoomout.png</file>
+        <file>wait/wait0.png</file>
+        <file>wait/wait1.png</file>
+        <file>wait/wait2.png</file>
+        <file>wait/wait3.png</file>
+        <file>wait/wait4.png</file>
+        <file>wait/wait5.png</file>
+        <file>wait/wait6.png</file>
+        <file>wait/wait7.png</file>
+        <file>light.png</file>
+        <file>pencil.png</file>
+    </qresource>
+</RCC>

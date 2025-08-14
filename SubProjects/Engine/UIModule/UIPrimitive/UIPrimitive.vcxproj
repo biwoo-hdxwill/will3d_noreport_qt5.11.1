@@ -1,0 +1,2499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Europe|Win32">
+      <Configuration>Debug_Europe</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_Europe|x64">
+      <Configuration>Debug_Europe</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_light|Win32">
+      <Configuration>Debug_light</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_light|x64">
+      <Configuration>Debug_light</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_viewer|Win32">
+      <Configuration>Debug_viewer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_viewer|x64">
+      <Configuration>Debug_viewer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Europe|Win32">
+      <Configuration>Release_Europe</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Europe|x64">
+      <Configuration>Release_Europe</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_light|Win32">
+      <Configuration>Release_light</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_light|x64">
+      <Configuration>Release_light</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_viewer|Win32">
+      <Configuration>Release_viewer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_viewer|x64">
+      <Configuration>Release_viewer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{02E79584-0324-4C3F-B691-D9C54B50D5A4}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)\Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)\include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)\Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)\include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)\Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(ProjectDir)\include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)Lib\glew\$(Platform);$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)SubProjects;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtModules>core;gui;widgets</QtModules>
+    <QtInstall>msvc2017_64</QtInstall>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'" Label="QtSettings">
+    <QtInstall>msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'" Label="QtSettings">
+    <QtInstall>msvc2015</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_EUROPE;UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WILL3D_EUROPE;UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;UIPRIMITIVE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\GeneratedFiles\$(Platform)\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <BrowseInformation>false</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ResContainer.lib;GLfunctions.lib;Common.lib;Resource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>false</PreserveSbr>
+    </Bscmake>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(Platform)\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="image_filter_selector.cpp" />
+    <ClCompile Include="measure_line.cpp" />
+    <ClCompile Include="measure_tools.cpp" />
+    <ClCompile Include="direction_text_item.cpp" />
+    <ClCompile Include="ellipse_mpr.cpp" />
+    <ClCompile Include="grid_lines.cpp" />
+    <ClCompile Include="guide_line_list_item.cpp" />
+    <ClCompile Include="implant_handle.cpp" />
+    <ClCompile Include="implant_text_item.cpp" />
+    <ClCompile Include="line_list_item.cpp" />
+    <ClCompile Include="panning_handle_item.cpp" />
+    <ClCompile Include="pano_arch_item.cpp" />
+    <ClCompile Include="pano_nerve_item.cpp" />
+    <ClCompile Include="pano_orientatoin_roi_item.cpp" />
+    <ClCompile Include="pano_ruler_item.cpp" />
+    <ClCompile Include="pathitem_freedraw.cpp" />
+    <ClCompile Include="polygon_item.cpp" />
+    <ClCompile Include="profile_line_item.cpp" />
+    <ClCompile Include="rotate_line_item.cpp" />
+    <ClCompile Include="slider.cpp" />
+    <ClCompile Include="text_edit.cpp" />
+    <ClCompile Include="simple_text_item.cpp" />
+    <ClCompile Include="tmj_arrow_item.cpp" />
+    <ClCompile Include="tmj_item.cpp" />
+    <ClCompile Include="view_border_item.cpp" />
+    <ClCompile Include="W3ArcItem.cpp" />
+    <ClCompile Include="annotation_arrow.cpp" />
+    <ClCompile Include="W3ArrowItem.cpp" />
+    <ClCompile Include="W3ArrowItem_anno.cpp" />
+    <ClCompile Include="measure_base.cpp" />
+    <ClCompile Include="W3Curve.cpp" />
+    <ClCompile Include="measure_degree.cpp" />
+    <ClCompile Include="W3DicomLoaderScrollbar.cpp" />
+    <ClCompile Include="W3EllipseItem.cpp" />
+    <ClCompile Include="W3EllipseItem_anno.cpp" />
+    <ClCompile Include="W3EllipseItem_otf.cpp" />
+    <ClCompile Include="W3FilteredTextItem.cpp" />
+    <ClCompile Include="annotation_freedraw.cpp" />
+    <ClCompile Include="W3GuideCrossLine.cpp" />
+    <ClCompile Include="W3GuideRect.cpp" />
+    <ClCompile Include="W3ImplantButton.cpp" />
+    <ClCompile Include="W3InputDialog.cpp" />
+    <ClCompile Include="W3LabelItem_anno.cpp" />
+    <ClCompile Include="measure_length.cpp" />
+    <ClCompile Include="W3LineItem.cpp" />
+    <ClCompile Include="W3LineItem_MPR.cpp" />
+    <ClCompile Include="W3LineItem_otf.cpp" />
+    <ClCompile Include="annotation_note.cpp" />
+    <ClCompile Include="W3OTFDialog.cpp" />
+    <ClCompile Include="W3OTFPolygon.cpp" />
+    <ClCompile Include="W3PathItem.cpp" />
+    <ClCompile Include="W3PathItem_anno.cpp" />
+    <ClCompile Include="plotter_module.cpp" />
+    <ClCompile Include="measure_polygon.cpp" />
+    <ClCompile Include="W3PolygonItem_anno.cpp" />
+    <ClCompile Include="W3PolygonItem_otf.cpp" />
+    <ClCompile Include="measure_profile.cpp" />
+    <ClCompile Include="W3ProfileDialog.cpp" />
+    <ClCompile Include="W3RectItem.cpp" />
+    <ClCompile Include="W3RectItem_anno.cpp" />
+    <ClCompile Include="W3RectItem_rangeMPR.cpp" />
+    <ClCompile Include="W3Slider_2DView.cpp" />
+    <ClCompile Include="W3SpanSlider.cpp" />
+    <ClCompile Include="W3Spline.cpp" />
+    <ClCompile Include="measure_tape.cpp" />
+    <ClCompile Include="W3TextItem.cpp" />
+    <ClCompile Include="W3TextItem_ImplantID.cpp" />
+    <ClCompile Include="W3TextItem_otf.cpp" />
+    <ClCompile Include="W3TextItem_sequence.cpp" />
+    <ClCompile Include="W3TextItem_switch.cpp" />
+    <ClCompile Include="W3ViewRuler.cpp" />
+    <ClCompile Include="W3ViewInfoTextItems.cpp" />
+    <ClCompile Include="W3ViewAlignTextItem.cpp" />
+    <ClCompile Include="W3WorldAxisItem.cpp" />
+    <ClCompile Include="zoom_3d_cube.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="measure_tools.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="pano_arch_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="pano_nerve_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="line_list_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="pano_orientatoin_roi_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="pano_ruler_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="ellipse_mpr.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="pathitem_freedraw.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="pannig_handle_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="guide_line_list_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="text_edit.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="grid_lines.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="rotate_line_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="implant_handle.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="simple_text_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="implant_text_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="direction_text_item.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="tmj_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="polygon_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="tmj_arrow_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="slider.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="image_filter_selector.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="measure_line.h" />
+    <QtMoc Include="profile_line_item.h" />
+    <ClInclude Include="uiprimitive_global.h" />
+    <QtMoc Include="W3ViewAlignTextItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3ViewInfoTextItems.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3ViewRuler.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3InputDialog.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="zoom_3d_cube.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3WorldAxisItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3TextItem_switch.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3TextItem_sequence.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3TextItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3OTFDialog.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="W3OTFPolygon.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="W3Curve.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3FilteredTextItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3DicomLoaderScrollbar.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="view_border_item.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="W3ArcItem.h" />
+    <CustomBuild Include="annotation_arrow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <ClInclude Include="W3ArrowItem.h" />
+    <CustomBuild Include="measure_base.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="measure_degree.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="annotation_freedraw.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3ArrowItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3EllipseItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="W3GuideCrossLine.h" />
+    <QtMoc Include="W3LineItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3LabelItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="measure_length.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="annotation_note.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="W3GuideRect.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="W3PathItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3Spline.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3RectItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="plotter_module.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="measure_polygon.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="measure_profile.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3PathItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3PolygonItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3RectItem_anno.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3SpanSlider.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="measure_tape.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="W3TextItem_ImplantID.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3Slider_2DView.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3ProfileDialog.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3ImplantButton.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <ClInclude Include="W3TextItem_otf.h" />
+    <QtMoc Include="W3PolygonItem_otf.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <CustomBuild Include="W3LineItem_otf.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="W3EllipseItem_otf.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_viewer|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_light|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_viewer|Win32'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="W3EllipseItem.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3RectItem_rangeMPR.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="W3LineItem_MPR.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug_Europe|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release_Europe|Win32'">false</DynamicSource>
+    </QtMoc>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

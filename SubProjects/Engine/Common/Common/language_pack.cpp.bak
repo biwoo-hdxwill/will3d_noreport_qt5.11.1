@@ -1,0 +1,599 @@
+#include "language_pack.h"
+
+#include <iostream>
+
+#include <qapplication.h>
+#include <qtranslator.h>
+#include <qsettings.h>
+#include <qtextcodec.h>
+
+#include "W3Memory.h"
+#include "W3Logger.h"
+
+namespace lang
+{
+	// .ini 에 저장되어 있는 언어 세팅으로 프로그램에서 사용하는 UI text들을 초기화한다.
+	void LanguagePack::Init(void)
+	{
+		// TODO ::
+		// 1. .ini 파일에서 세팅을 가져온다.
+		QSettings settings("Will3D.ini", QSettings::IniFormat);
+		settings.setIniCodec(QTextCodec::codecForName("UTF-8"));
+		int language_key = settings.value(kSectionKeyLang).toInt();
+
+		// 2. 언어에 맞는 qm 파일을 불러와 세팅한다.
+		QTranslator* translator = new QTranslator();
+		QString qm_path = QString();
+		switch (language_key)
+		{
+		case LanguageID::EN:
+			common::Logger::instance()->Print(common::LogType::INF, "Language : English");
+			break;
+		case LanguageID::ZH_CN:
+			common::Logger::instance()->Print(common::LogType::INF, "Language : Chinese");
+			qm_path = "./language/common_zh_cn.qm";
+			break;
+		case LanguageID::ZH_TW:
+			common::Logger::instance()->Print(common::LogType::INF, "Language : Taiwan");
+			qm_path = "./language/common_zh_tw.qm";
+			break;
+		case LanguageID::RU:
+			common::Logger::instance()->Print(common::LogType::INF, "Language : Rusia");
+			qm_path = "./language/common_ru.qm";
+			break;
+		default:
+			break;
+		}
+
+		// 3. 언어팩을 설치한다.
+		if (qm_path.length() == 0)
+		{
+			SAFE_DELETE_OBJECT(translator);
+		}
+		else
+		{
+			if (!translator->load(qm_path))
+			{
+				SAFE_DELETE_OBJECT(translator);
+				common::Logger::instance()->Print(common::LogType::ERR, "Language pack : qm file load failed.");
+			}
+			else
+			{
+				bool result = QApplication::instance()->installTranslator(translator);
+				if (!result)
+				{
+					common::Logger::instance()->Print(common::LogType::ERR, "Language pack : failed to install language.");
+					assert(false);
+				}
+			}
+		}
+	}
+
+	QString LanguagePack::txt_2d() { return tr("2D"); }
+	QString LanguagePack::txt_2d_views() { return tr("2D views"); }
+	QString LanguagePack::txt_2nd_vol() { return tr("2nd Vol"); }
+	QString LanguagePack::txt_3d() { return tr("3D"); }
+	QString LanguagePack::txt_3d_ceph() { return tr("3D Ceph"); }
+	QString LanguagePack::txt_3d_cut() { return tr("3D Cut"); }
+	QString LanguagePack::txt_3d_cut_reset() { return tr("3D Cut reset"); }
+	QString LanguagePack::txt_3d_photo() { return tr("3D Photo"); }
+	QString LanguagePack::txt_3d_surface() { return tr("3D Surface"); }
+	QString LanguagePack::txt_3d_surgery() { return tr("3D Surgery"); }
+	QString LanguagePack::txt_3d_views() { return tr("3D views"); }
+	QString LanguagePack::txt_3d_zoom() { return tr("3D Zoom"); }
+	QString LanguagePack::txt_about() { return tr("About"); }
+	QString LanguagePack::txt_add_a_new_user() { return tr("Add a New User"); }
+	QString LanguagePack::txt_add_new() { return tr("Add new"); }
+	QString LanguagePack::txt_adjust() { return tr("Adjust"); }
+	QString LanguagePack::txt_adjust_cut() { return tr("Adjust cut"); }
+	QString LanguagePack::txt_admin() { return tr("Admin"); }
+	QString LanguagePack::txt_administrator() { return tr("Administrator"); }
+	QString LanguagePack::txt_advanced() { return tr("Advanced"); }
+	QString LanguagePack::txt_after() { return tr("After"); }
+	QString LanguagePack::txt_age() { return tr("Age"); }
+	QString LanguagePack::txt_airway() { return tr("Airway"); }
+	QString LanguagePack::txt_alpha() { return tr("Opacity"); }
+	QString LanguagePack::txt_always_show_implant_id() { return tr("Always show implant ID."); }
+	QString LanguagePack::txt_all_rights_reserved() { return tr("All rights reserved"); }
+	QString LanguagePack::txt_analysis() { return tr("Analysis"); }
+	QString LanguagePack::txt_angle() { return tr("Angle"); }
+	QString LanguagePack::txt_anterior() { return tr("Anterior"); }
+	QString LanguagePack::txt_apply() { return tr("Apply"); }
+	QString LanguagePack::txt_apply_arch() { return tr("Apply arch"); }
+	QString LanguagePack::txt_apply_changes() { return tr("Apply changes"); }
+	QString LanguagePack::txt_arch_selection() { return tr("Arch selection"); }
+	QString LanguagePack::txt_panorama_default_thickness() { return tr("Panorama default thickness (mm)"); }
+	QString LanguagePack::txt_panorama_thickness_increments() { return tr("Panorama thickness increments (mm)"); }
+	QString LanguagePack::txt_pick_a_point_of_interest() { return tr("Pick a point of interest"); }
+	QString LanguagePack::txt_area() { return tr("Area"); }
+	QString LanguagePack::txt_arrow() { return tr("Arrow"); }
+	QString LanguagePack::txt_auto() { return tr("Auto"); }
+	QString LanguagePack::txt_auto_arch() { return tr("Auto Arch"); }
+	QString LanguagePack::txt_auto_login() { return tr("Auto Login"); }
+	QString LanguagePack::txt_auto_registration() { return tr("Auto Registration"); }
+	QString LanguagePack::txt_anterior_posterior() { return tr("Anterior-Posterior"); }
+	QString LanguagePack::txt_avg() { return tr("Avg"); }
+	QString LanguagePack::txt_axial() { return tr("Axial"); }
+	QString LanguagePack::txt_backward() { return tr("Backward"); }
+	QString LanguagePack::txt_before() { return tr("Before"); }
+	QString LanguagePack::txt_before_and_after() { return tr("Before and After"); }
+	QString LanguagePack::txt_birth_date() { return tr("Birth Date"); }
+	QString LanguagePack::txt_bits_allocated() { return tr("Bits Allocated"); }
+	QString LanguagePack::txt_bone_density() { return tr("Bone Density"); }
+	QString LanguagePack::txt_bottom() { return tr("Bottom"); }
+	QString LanguagePack::txt_brightness() { return tr("Brightness"); }
+	QString LanguagePack::txt_browse() { return tr("Browse"); }
+	QString LanguagePack::txt_buccal_lingual() { return tr("Buccal-Lingual"); }
+	QString LanguagePack::txt_camera_dir() { return tr("Camera direction"); }
+	QString LanguagePack::txt_cancel() { return tr("Cancel"); }
+	QString LanguagePack::txt_capture() { return tr("Capture"); }
+	QString LanguagePack::txt_capture_path() { return tr("Capture path"); }
+	QString LanguagePack::txt_copyright() { return tr("Copyright"); }
+	QString LanguagePack::txt_cd_usb_export() { return tr("CD/USB Export"); }
+	QString LanguagePack::txt_change() { return tr("Change"); }
+	QString LanguagePack::txt_chin() { return tr("Chin"); }
+	QString LanguagePack::txt_circle() { return tr("Circle"); }
+	QString LanguagePack::txt_clear_all() { return tr("Clear all"); }
+	QString LanguagePack::txt_clear_mapping_points() { return tr("Clear mapping points"); }
+	QString LanguagePack::txt_clear_points() { return tr("Clear Points"); }
+	QString LanguagePack::txt_clipping() { return tr("Clipping"); }
+	QString LanguagePack::txt_close() { return tr("Close"); }
+	QString LanguagePack::txt_collided_color() { return tr("Collided color"); }
+	QString LanguagePack::txt_collision_margin() { return tr("Collision margin (mm)"); }
+	QString LanguagePack::txt_collision_margin_visible_on() { return tr("Collision margin visible on"); }
+	QString LanguagePack::txt_columns() { return tr("Columns"); }
+	QString LanguagePack::txt_continue() { return tr("Continue"); }
+	QString LanguagePack::txt_contrast() { return tr("Contrast"); }
+	QString LanguagePack::txt_coordinate() { return tr("Coordinate"); }
+	QString LanguagePack::txt_coordinate_system() { return tr("Coordinate System"); }
+	QString LanguagePack::txt_coronal() { return tr("Coronal"); }
+	QString LanguagePack::txt_cranial_base() { return tr("Cranial Base"); }
+	QString LanguagePack::txt_cross_section() { return tr("Cross section"); }
+	QString LanguagePack::txt_cross_section_view() { return tr("Cross Section View"); }
+	QString LanguagePack::txt_cursor() { return tr("Cursor"); }
+	QString LanguagePack::txt_curve() { return tr("Curve"); }
+	QString LanguagePack::txt_customize_coord_system() { return tr("Customize coordinate system"); }
+	QString LanguagePack::txt_cut() { return tr("Cut"); }
+	QString LanguagePack::txt_database() { return tr("Database"); }
+	QString LanguagePack::txt_default_color() { return tr("Default color"); }
+	QString LanguagePack::txt_default_diameter() { return tr("Default diameter (mm)"); }
+	QString LanguagePack::txt_default_interval() { return tr("Default Interval (mm)"); }
+	QString LanguagePack::txt_default_range() { return tr("Default Range (mm)"); }
+	QString LanguagePack::txt_degree_short() { return tr("deg"); }
+	QString LanguagePack::txt_delete() { return tr("Delete"); }
+	QString LanguagePack::txt_delete_all() { return tr("Delete All"); }
+	QString LanguagePack::txt_delete_user() { return tr("Delete user"); }
+	QString LanguagePack::txt_description() { return tr("Description"); }
+	QString LanguagePack::txt_di() { return tr("DI"); }
+	QString LanguagePack::txt_dia() { return tr("Dia."); }
+	QString LanguagePack::txt_diameter() { return tr("Diameter"); }
+	QString LanguagePack::txt_dicom_compressed() { return tr("Dicom compressed"); }
+	QString LanguagePack::txt_dicom_summary() { return tr("DICOM Summary :"); }
+	QString LanguagePack::txt_display() { return tr("Display"); }
+	QString LanguagePack::txt_done() { return tr("Done"); }
+	QString LanguagePack::txt_draw() { return tr("Draw"); }
+	QString LanguagePack::txt_draw_arch() { return tr("Draw Arch"); }
+	QString LanguagePack::txt_draw_modify() { return tr("Draw / Modify"); }
+	QString LanguagePack::txt_draw_path() { return tr("Draw Path"); }
+	QString LanguagePack::txt_edit() { return tr("Edit"); }
+	QString LanguagePack::txt_edit_a_tracing_point() { return tr("Edit a tracing point"); }
+	QString LanguagePack::txt_edit_arch() { return tr("Edit arch"); }
+	QString LanguagePack::txt_edit_tracing() { return tr("Edit Tracing"); }
+	QString LanguagePack::txt_email() { return tr("Email"); }
+	QString LanguagePack::txt_enable() { return tr("Enable"); }
+	QString LanguagePack::txt_endoscopy() { return tr("Endoscopy"); }
+	QString LanguagePack::txt_endoscopy_explorer() { return tr("Endoscopy Explorer"); }
+	QString LanguagePack::txt_endoscopy_slice() { return tr("Endoscopy Slice"); }
+	QString LanguagePack::txt_exit() { return tr("Exit"); }
+	QString LanguagePack::txt_export() { return tr("Export"); }
+	QString LanguagePack::txt_export_to() { return tr("Export to"); }
+	QString LanguagePack::txt_exposure_time() { return tr("Exposure Time"); }
+	QString LanguagePack::txt_face_mapping_from_photo() { return tr("Face mapping from photo"); }
+	QString LanguagePack::txt_face_model() { return tr("Face model"); }
+	QString LanguagePack::txt_face_photo() { return tr("Face photo"); }
+	QString LanguagePack::txt_face_simulation() { return tr("Face\nSimulation"); }
+	QString LanguagePack::txt_face_transparency() { return tr("Face transparency"); }
+	QString LanguagePack::txt_favorite_open_paths() { return tr("Favorite open paths"); }
+	QString LanguagePack::txt_file() { return tr("File"); }
+	QString LanguagePack::txt_file_system() { return tr("File System"); }
+	QString LanguagePack::txt_files() { return tr("Files"); }
+	QString LanguagePack::txt_filter() { return tr("Filter : "); }
+	QString LanguagePack::txt_find_username_and_password() { return tr("Find Username and Password"); }
+	QString LanguagePack::txt_fit() { return tr("Fit"); }
+	QString LanguagePack::txt_fixed() { return tr("Fixed"); }
+	QString LanguagePack::txt_flip() { return tr("Flip"); }
+	QString LanguagePack::txt_flip_slices_across_the_arch_centerline() { return tr("Flip slices across the arch centerline."); }
+	QString LanguagePack::txt_font_size() { return tr("Font size"); }
+	QString LanguagePack::txt_forgot_username_password() { return tr("Forgot username/password?"); }
+	QString LanguagePack::txt_forward() { return tr("Forward"); }
+	QString LanguagePack::txt_free_draw() { return tr("Free Draw"); }
+	QString LanguagePack::txt_free_explorer() { return tr("Free Explorer"); }
+	QString LanguagePack::txt_front() { return tr("Front"); }
+	QString LanguagePack::txt_frontal() { return tr("Frontal"); }
+	QString LanguagePack::txt_frontal_main() { return tr("Frontal Main"); }
+	QString LanguagePack::txt_gender() { return tr("Gender"); }
+	QString LanguagePack::txt_general() { return tr("General"); }
+	QString LanguagePack::txt_generate_face() { return tr("Generate Face"); }
+	QString LanguagePack::txt_grid() { return tr("Grid"); }
+	QString LanguagePack::txt_grid_spacing() { return tr("Grid spacing"); }
+	QString LanguagePack::txt_gui_size() { return tr("Widget size"); }
+	QString LanguagePack::txt_help() { return tr("Help"); }
+	QString LanguagePack::txt_hide() { return tr("Hide"); }
+	QString LanguagePack::txt_hide_ui() { return tr("Hide UI"); }
+	QString LanguagePack::txt_hide_mpr_views_on_maximized_vr_layout() { return tr("Hide MPR views on maximized VR layout"); }
+	QString LanguagePack::txt_high() { return tr("High"); }
+	QString LanguagePack::txt_horizontal() { return tr("Horizontal"); }
+	QString LanguagePack::txt_horizontal_skeletal() { return tr("Horizontal Skeletal"); }
+	QString LanguagePack::txt_id() { return tr("ID"); }
+	QString LanguagePack::txt_images() { return tr("Images"); }
+	QString LanguagePack::txt_implant() { return tr("Implant"); }
+	QString LanguagePack::txt_implant_db() { return tr("Implant DB"); }
+	QString LanguagePack::txt_implant_library() { return tr("Implant library"); }
+	QString LanguagePack::txt_implant_list() { return tr("Implant list"); }
+	QString LanguagePack::txt_implant_presets() { return tr("Implant presets"); }
+	QString LanguagePack::txt_implant_preference() { return tr("Implant preference"); }
+	QString LanguagePack::txt_implants() { return tr("Implants"); }
+	QString LanguagePack::txt_include_dicom_info() { return tr("Include DICOM info"); }
+	QString LanguagePack::txt_include_viewer() { return tr("Include Viewer"); }
+	QString LanguagePack::txt_interface() { return tr("Interface"); }
+	QString LanguagePack::txt_interval() { return tr("Interval"); }
+	QString LanguagePack::txt_interval_increments() { return tr("Interval increments (mm)"); }
+	QString LanguagePack::txt_invert() { return tr("Invert"); }
+	QString LanguagePack::txt_ip_address() { return tr("IP Address"); }
+	QString LanguagePack::txt_kvp() { return tr("kVp"); }
+	QString LanguagePack::txt_landmark() { return tr("Landmark"); }
+	QString LanguagePack::txt_language() { return tr("Language"); }
+	QString LanguagePack::txt_large() { return tr("Large"); }
+	QString LanguagePack::txt_lateral() { return tr("Lateral"); }
+	QString LanguagePack::txt_lateral_main() { return tr("Lateral Main"); }
+	QString LanguagePack::txt_lateral_medial() { return tr("Lateral-Medial"); }
+	QString LanguagePack::txt_layout() { return tr("Layout"); }
+	QString LanguagePack::txt_left() { return tr("Left"); }
+	QString LanguagePack::txt_left_frontal() { return tr("Left Frontal"); }
+	QString LanguagePack::txt_left_lateral() { return tr("Left Lateral"); }
+	QString LanguagePack::txt_left_height() { return tr("Left Height"); }
+	QString LanguagePack::txt_left_right() { return tr("Left-Right"); }
+	QString LanguagePack::txt_left_thickness() { return tr("Left Thickness"); }
+	QString LanguagePack::txt_left_tmj() { return tr("Left TMJ"); }
+	QString LanguagePack::txt_left_vertical_gap() { return tr("Left Vertical Gap"); }
+	QString LanguagePack::txt_left_width() { return tr("Left Width"); }
+	QString LanguagePack::txt_length() { return tr("Length"); }
+	QString LanguagePack::txt_library() { return tr("Library"); }
+	QString LanguagePack::txt_light() { return tr("Light"); }
+	QString LanguagePack::txt_lightbox() { return tr("Lightbox"); }
+	QString LanguagePack::txt_line() { return tr("Line"); }
+	QString LanguagePack::txt_line_color() { return tr("Line color"); }
+	QString LanguagePack::txt_list() { return tr("List"); }
+	QString LanguagePack::txt_load_face_photo_img() { return tr("Load face photo image"); }
+	QString LanguagePack::txt_load_new_volume() { return tr("Load New Volume"); }
+	QString LanguagePack::txt_load_photo() { return tr("Load Photo"); }
+	QString LanguagePack::txt_loading() { return tr("Loading"); }
+	QString LanguagePack::txt_local() { return tr("Local"); }
+	QString LanguagePack::txt_login() { return tr("Login"); }
+	QString LanguagePack::txt_login_with_this_username() { return tr("Login with this username"); }
+	QString LanguagePack::txt_logout() { return tr("Logout"); }
+	QString LanguagePack::txt_low() { return tr("Low"); }
+	QString LanguagePack::txt_ma() { return tr("mA"); }
+	QString LanguagePack::txt_main() { return tr("Main"); }
+	QString LanguagePack::txt_make_face_model() { return tr("Make face model"); }
+	QString LanguagePack::txt_manage() { return tr("Manage"); }
+	QString LanguagePack::txt_mandible() { return tr("Mandible"); }
+	QString LanguagePack::txt_mandibular_dental() { return tr("Mandibular Dental"); }
+	QString LanguagePack::txt_mandibular_dentition() { return tr("Mandibular Dentition"); }
+	QString LanguagePack::txt_mandibular_left() { return tr("Mandibular L"); }
+	QString LanguagePack::txt_mandibular_right() { return tr("Mandibular R"); }
+	QString LanguagePack::txt_manual() { return tr("Manual"); }
+	QString LanguagePack::txt_manual_arch() { return tr("Manual Arch"); }
+	QString LanguagePack::txt_manufacturer() { return tr("Manufacturer"); }
+	QString LanguagePack::txt_max() { return tr("Max"); }
+	QString LanguagePack::txt_maxilla() { return tr("Maxilla"); }
+	QString LanguagePack::txt_maxillary() { return tr("Maxillary"); }
+	QString LanguagePack::txt_maxillary_dental() { return tr("Maxillary Dental"); }
+	QString LanguagePack::txt_maxillary_dentition() { return tr("Maxillary Dentition"); }
+	QString LanguagePack::txt_maxillary_left() { return tr("Maxillary L"); }
+	QString LanguagePack::txt_maxillary_right() { return tr("Maxillary R"); }
+	QString LanguagePack::txt_measure() { return tr("Measure"); }
+	QString LanguagePack::txt_measure_list() { return tr("Measure List"); }
+	QString LanguagePack::txt_measurement() { return tr("Measurement"); }
+	QString LanguagePack::txt_medium() { return tr("Medium"); }
+	QString LanguagePack::txt_memo() { return tr("Memo"); }
+	QString LanguagePack::txt_min() { return tr("Min"); }
+	QString LanguagePack::txt_modality() { return tr("Modality"); }
+	QString LanguagePack::txt_model_number() { return tr("Model Number"); }
+	QString LanguagePack::txt_modify() { return tr("Modify"); }
+	QString LanguagePack::txt_mpr() { return tr("MPR"); }
+	QString LanguagePack::txt_mpr_overlay() { return tr("MPR Overlay : "); }	
+	QString LanguagePack::txt_name() { return tr("Name"); }
+	QString LanguagePack::txt_nerve() { return tr("Nerve"); }
+	QString LanguagePack::txt_nerves() { return tr("Nerves"); }
+	QString LanguagePack::txt_network() { return tr("Network"); }
+	QString LanguagePack::txt_network_setting() { return tr("Network Setting"); }
+	QString LanguagePack::txt_new_user() { return tr("+ New user"); }
+	QString LanguagePack::txt_no() { return tr("No"); }
+	QString LanguagePack::txt_note() { return tr("Note"); }
+	QString LanguagePack::txt_objects() { return tr("Objects"); }
+	QString LanguagePack::txt_oblique() { return tr("Oblique"); }
+	QString LanguagePack::txt_off() { return tr("Off"); }
+	QString LanguagePack::txt_ok() { return tr("OK"); }
+	QString LanguagePack::txt_on() { return tr("On"); }
+	QString LanguagePack::txt_only_tmj() { return tr("Only TMJ"); }
+	QString LanguagePack::txt_opacity() { return tr("Opacity"); }
+	QString LanguagePack::txt_open() { return tr("Open"); }
+	QString LanguagePack::txt_open_dicom_file() { return tr("Open DICOM File"); }
+	QString LanguagePack::txt_open_path() { return tr("Open Path"); }
+	QString LanguagePack::txt_orientation() { return tr("Orientation"); }
+	QString LanguagePack::txt_orthodontic() { return tr("Orthodontic"); }
+	QString LanguagePack::txt_pan() { return tr("Pan"); }
+	QString LanguagePack::txt_panorama() { return tr("Panorama"); }
+	QString LanguagePack::txt_panorama_view() { return tr("Panorama View"); }
+	QString LanguagePack::txt_panorama_clipping() { return tr("Panorama 3D Clipping"); }
+	QString LanguagePack::txt_password() { return tr("Password"); }
+	QString LanguagePack::txt_path() { return tr("Path"); }
+	QString LanguagePack::txt_pacs() { return tr("PACS"); }
+	QString LanguagePack::txt_pacs_mpr_default_setting_2d() { return tr("PACS MPR Default Setting 2D"); };
+	QString LanguagePack::txt_pacs_mpr_default_setting_3d() { return tr("PACS MPR Default Setting 3D"); };
+	QString LanguagePack::txt_pacs_server_list() { return tr("PACS Server List"); }
+	QString LanguagePack::txt_patient_id() { return tr("Patient ID :"); }
+	QString LanguagePack::txt_patient_name() { return tr("Patient Name"); }
+	QString LanguagePack::txt_perspective() { return tr("Perspective : "); }
+	QString LanguagePack::txt_phone() { return tr("Phone"); }
+	QString LanguagePack::txt_photo() { return tr("Photo"); }
+	QString LanguagePack::txt_photo_mapping() { return tr("Photo Mapping"); }
+	QString LanguagePack::txt_pi() { return tr("PI"); }
+	QString LanguagePack::txt_pixel_spacing() { return tr("Pixel Spacing"); }
+	QString LanguagePack::txt_polygon() { return tr("Polygon"); }
+	QString LanguagePack::txt_position() { return tr("Position"); }
+	QString LanguagePack::txt_posterior() { return tr("Posterior"); }
+	QString LanguagePack::txt_preference() { return tr("Preference"); }
+	QString LanguagePack::txt_preferences() { return tr("Preferences"); }
+	QString LanguagePack::txt_preset_setting() { return tr("Preset Setting"); }
+	QString LanguagePack::txt_print() { return tr("Print"); }
+	QString LanguagePack::txt_product() { return tr("Product"); }
+	QString LanguagePack::txt_product_line() { return tr("Product Line"); }
+	QString LanguagePack::txt_profile() { return tr("Profile"); }
+	QString LanguagePack::txt_quality() { return tr("Quality"); }
+	QString LanguagePack::txt_range() { return tr("Range"); }
+	QString LanguagePack::txt_recent() { return tr("Recent"); }
+	QString LanguagePack::txt_box() { return tr("Box"); }
+	QString LanguagePack::txt_rectangle() { return tr("Rectangle"); }
+	QString LanguagePack::txt_redo() { return tr("Redo"); }
+	QString LanguagePack::txt_reference() { return tr("Reference"); }
+	QString LanguagePack::txt_reference_planes() { return tr("Reference planes"); }
+	QString LanguagePack::txt_release_date() { return tr("Release date"); }
+	QString LanguagePack::txt_remove() { return tr("Remove"); }
+	QString LanguagePack::txt_rendering_type() { return tr("Rendering type"); }
+	QString LanguagePack::txt_reorientation() { return tr("Reorientation"); }
+	QString LanguagePack::txt_report() { return tr("Report"); }
+	QString LanguagePack::txt_request_new_password() { return tr("Request new password"); }
+	QString LanguagePack::txt_required_fields() { return tr("* : Required fields"); }
+	QString LanguagePack::txt_rescale_intercept() { return tr("Rescale Intercept"); }
+	QString LanguagePack::txt_rescale_slope() { return tr("Rescale Slope"); }
+	QString LanguagePack::txt_reset() { return tr("Reset"); }
+	QString LanguagePack::txt_right() { return tr("Right"); }
+	QString LanguagePack::txt_right_frontal() { return tr("Right Frontal"); }
+	QString LanguagePack::txt_right_lateral() { return tr("Right Lateral"); }
+	QString LanguagePack::txt_right_height() { return tr("Right Height"); }
+	QString LanguagePack::txt_right_thickness() { return tr("Right Thickness"); }
+	QString LanguagePack::txt_right_tmj() { return tr("Right TMJ"); }
+	QString LanguagePack::txt_right_vertical_gap() { return tr("Right Vertical Gap"); }
+	QString LanguagePack::txt_right_width() { return tr("Right Width"); }
+	QString LanguagePack::txt_roi() { return tr("ROI"); }
+	QString LanguagePack::txt_rotate() { return tr("Rotate"); }
+	QString LanguagePack::txt_rotation() { return tr("Rotation"); }
+	QString LanguagePack::txt_rotation_type() { return tr("Rotation Type"); }
+	QString LanguagePack::txt_rotation_dir() { return tr("Rotation Dir"); }
+	QString LanguagePack::txt_rotation_increments() { return tr("Rotation Increments"); }
+	QString LanguagePack::txt_rows() { return tr("Rows"); }
+	QString LanguagePack::txt_ruler() { return tr("Ruler"); }
+	QString LanguagePack::txt_sagittal() { return tr("Sagittal"); }
+	QString LanguagePack::txt_save() { return tr("Save"); }
+	QString LanguagePack::txt_scan_date() { return tr("Scan Date"); }
+	QString LanguagePack::txt_search() { return tr("Search"); }
+	QString LanguagePack::txt_search_patient() { return tr("Search Patient"); }
+	QString LanguagePack::txt_segment_and_projection() { return tr("Segment and projection"); }
+	QString LanguagePack::txt_segment_only() { return tr("Segment only"); }
+	QString LanguagePack::txt_select() { return tr("Select"); }
+	QString LanguagePack::txt_select_analysis_method() { return tr("Select analysis method"); }
+	QString LanguagePack::txt_select_area_to_capture() { return tr("Select area to capture"); }
+	QString LanguagePack::txt_select_method() { return tr("Select Method"); }
+	QString LanguagePack::txt_selected_color() { return tr("Selected color"); }
+	QString LanguagePack::txt_selected_file_information() { return tr("Selected File Information"); }
+	QString LanguagePack::txt_selected_pacs_server() { return tr("Selected PACS Server"); }
+	QString LanguagePack::txt_selected_volume_of_interest() { return tr("Selected Volume of Interest :"); }
+	QString LanguagePack::txt_selected_implant() { return tr("Selected Implant"); }
+	QString LanguagePack::txt_send() { return tr("Send"); }
+	QString LanguagePack::txt_series_time() { return tr("Series Time"); }
+	QString LanguagePack::txt_server() { return tr("Server"); }
+	QString LanguagePack::txt_set_current_as_default() { return tr("Set current as default"); }
+	QString LanguagePack::txt_set_thd_for_face_model() { return tr("Set threshold for face model"); }
+	QString LanguagePack::txt_setup() { return tr("Setup"); }
+	QString LanguagePack::txt_shading() { return tr("Shading"); }
+	QString LanguagePack::txt_show_cross_sectional_hatches_and_numbers() { return tr("Show cross-sectional hatches and numbers."); }
+	QString LanguagePack::txt_show_nerves() { return tr("Show nerve(s)"); }
+	QString LanguagePack::txt_show_path() { return tr("Show path"); }
+	QString LanguagePack::txt_show_rulers() { return tr("Show rulers."); }
+	QString LanguagePack::txt_show_skin() { return tr("Show Skin"); }
+	QString LanguagePack::txt_show_slice_numbers() { return tr("Show slice number(s)."); }
+	QString LanguagePack::txt_slice() { return tr("Slice"); }
+	QString LanguagePack::txt_slice_thickness() { return tr("Slice Thickness"); }
+	QString LanguagePack::txt_small() { return tr("Small"); }
+	QString LanguagePack::txt_smooth_on() { return tr("Smooth on"); }
+	QString LanguagePack::txt_solid() { return tr("Solid"); }
+	QString LanguagePack::txt_softtissue() { return tr("Soft Tissue"); }
+	QString LanguagePack::txt_softtissue_measurement() { return tr("Soft Tissue Measurement"); }
+	QString LanguagePack::txt_speed() { return tr("Speed"); }
+	QString LanguagePack::txt_start() { return tr("Start"); }
+	QString LanguagePack::txt_std_deviation() { return tr("Std deviation"); }
+	QString LanguagePack::txt_stl_export() { return tr("STL Export"); }
+	QString LanguagePack::txt_stl_export_path() { return tr("STL Export Path"); }
+	QString LanguagePack::txt_stl_setting() { return tr("STL Setting"); }
+	QString LanguagePack::txt_superimposition() { return tr("Super\nImposition"); }
+	QString LanguagePack::txt_support() { return tr("Support"); }
+	QString LanguagePack::txt_surgery_simulation() { return tr("Surgery simulation"); }
+	QString LanguagePack::txt_tape() { return tr("Tape"); }
+	QString LanguagePack::txt_tape_line_multi_label() { return tr("Tape Line Multi Label"); }	
+	QString LanguagePack::txt_task() { return tr("Task"); }
+	QString LanguagePack::txt_text_color() { return tr("Text color"); }
+	QString LanguagePack::txt_text_size() { return tr("Text size"); }
+	QString LanguagePack::txt_thd_value() { return tr("Threshold value"); }
+	QString LanguagePack::txt_thickness() { return tr("Thickness"); }
+	QString LanguagePack::txt_thickness_increments() { return tr("Thickness increments (mm)"); }
+	QString LanguagePack::txt_tmj() { return tr("TMJ"); }
+	QString LanguagePack::txt_top_bottom() { return tr("Top-Bottom"); }
+	QString LanguagePack::txt_total_number_of_selected_images() { return tr("Total Number Of Selected Image(s)"); }
+	QString LanguagePack::txt_tracing() { return tr("Tracing"); }
+	QString LanguagePack::txt_tracing_list() { return tr("Tracing List"); }
+	QString LanguagePack::txt_translation() { return tr("Translation"); }
+	QString LanguagePack::txt_translation_increments() { return tr("Translation Increments (mm)"); }
+	QString LanguagePack::txt_type() { return tr("Type"); }
+	QString LanguagePack::txt_undo() { return tr("Undo"); }
+	QString LanguagePack::txt_use_fixed_value() { return tr("Use fixed value"); }
+	QString LanguagePack::txt_user() { return tr("User"); }
+	QString LanguagePack::txt_user_information() { return tr("User information"); }
+	QString LanguagePack::txt_user_list() { return tr("User list"); }
+	QString LanguagePack::txt_user_manager() { return tr("Users Manager"); }
+	QString LanguagePack::txt_user_type() { return tr("User type"); }
+	QString LanguagePack::txt_username() { return tr("Username"); }
+	QString LanguagePack::txt_value() { return tr("Value"); }
+	QString LanguagePack::txt_vertical() { return tr("Vertical"); }
+	QString LanguagePack::txt_version() { return tr("Version"); }
+	QString LanguagePack::txt_view() { return tr("View"); }
+	QString LanguagePack::txt_view_list_swap() { return tr("View List Swap"); }
+	QString LanguagePack::txt_visibility() { return tr("Visibility"); }
+	QString LanguagePack::txt_visible_face_skin() { return tr("Visible face skin"); }
+	QString LanguagePack::txt_volume() { return tr("Volume"); }
+	QString LanguagePack::txt_volume_rendering() { return tr("Volume Rendering"); }
+	QString LanguagePack::txt_vr_shaded() { return tr("VR : Shaded"); }
+	QString LanguagePack::txt_vr_unshaded() { return tr("VR : Unshaded"); }
+	QString LanguagePack::txt_window_center() { return tr("Window Center"); }
+	QString LanguagePack::txt_window_width() { return tr("Window Width"); }
+	QString LanguagePack::txt_windowing() { return tr("Windowing"); }
+	QString LanguagePack::txt_wire() { return tr("Outline"); }
+	QString LanguagePack::txt_write_memo_here() { return tr("Write memo here."); }
+	QString LanguagePack::txt_yes() { return tr("Yes"); }
+	QString LanguagePack::txt_zoom() { return tr("Zoom"); }
+	QString LanguagePack::txt_width() { return tr("Width"); }
+	QString LanguagePack::txt_height() { return tr("Height"); }
+	QString LanguagePack::txt_add() { return tr("Add"); }
+	QString LanguagePack::txt_custom_implant() { return tr("Custom Implant"); }
+	QString LanguagePack::txt_custom() { return tr("Custom"); }
+	QString LanguagePack::txt_model() { return tr("Model"); }
+	QString LanguagePack::txt_straight() { return tr("Straight"); }
+	QString LanguagePack::txt_tapered() { return tr("Tapered"); }
+	QString LanguagePack::txt_coronal_diameter() { return tr("Coronal diameter"); }
+	QString LanguagePack::txt_apical_diameter() { return tr("Apical diameter"); }
+	QString LanguagePack::txt_move() { return tr("Move"); }
+	QString LanguagePack::txt_move_on() { return tr("Move on"); }
+	QString LanguagePack::txt_move_off() { return tr("Move off"); }
+	QString LanguagePack::txt_main_volume() { return tr("Main Volume"); }
+	QString LanguagePack::txt_second_volume() { return tr("Second Volume"); }
+	QString LanguagePack::txt_both_volume() { return tr("Both Volume"); }
+	QString LanguagePack::txt_data_thumbnail() { return tr("Data Thumbnail"); }
+	QString LanguagePack::txt_select_color() { return tr("Select Color"); }
+	QString LanguagePack::txt_basic_colors() { return tr("Basic colors"); }
+	QString LanguagePack::txt_custom_colors() { return tr("Custom colors"); }
+	QString LanguagePack::txt_hue() { return tr("Hue"); }
+	QString LanguagePack::txt_sat() { return tr("Sat"); }
+	QString LanguagePack::txt_val() { return tr("Val"); }
+	QString LanguagePack::txt_red() { return tr("Red"); }
+	QString LanguagePack::txt_green() { return tr("Green"); }
+	QString LanguagePack::txt_blue() { return tr("Blue"); }
+	QString LanguagePack::txt_alpha_channel() { return tr("Alpha channel"); }
+	QString LanguagePack::txt_html() { return tr("HTML"); }
+	QString LanguagePack::txt_pick_screen_color() { return tr("Pick Screen Color"); }
+	QString LanguagePack::txt_add_to_custom_colors() { return tr("Add to Custom Colors"); }
+
+	QString LanguagePack::msg_01() { return tr("Implant file not found."); }
+	QString LanguagePack::msg_02() { return tr("The length or diameter of the implant is incorrect."); }
+	QString LanguagePack::msg_03() { return tr("Please set Coordinate System points."); }
+	QString LanguagePack::msg_04() { return tr("This task has been traced."); }
+	QString LanguagePack::msg_05() { return tr("This tracing has been done."); }
+	QString LanguagePack::msg_06() { return tr("If you reset this tracing, all traced data will be lost."); }
+	QString LanguagePack::msg_07() { return tr("Database Connection Error."); }
+	QString LanguagePack::msg_08() { return tr("Can't open."); }
+	QString LanguagePack::msg_09() { return tr("All database data will be deleted."); }
+	QString LanguagePack::msg_10() { return tr("Delete Manufacturer."); }
+	QString LanguagePack::msg_11() { return tr("Delete Product."); }
+	QString LanguagePack::msg_12() { return tr("Delete Implant."); }
+	QString LanguagePack::msg_13() { return tr("Customized preset file was not found."); }
+	QString LanguagePack::msg_14() { return tr("Please check path of the customized preset file"); }
+	QString LanguagePack::msg_15() { return tr("Save Preset"); }
+	QString LanguagePack::msg_16() { return tr("Customized preset has been saved."); }
+	QString LanguagePack::msg_17() { return tr("Overwrite Preset"); }
+	QString LanguagePack::msg_18() { return tr("Customized preset that was saved to existing will be deleted. Do you want to save the customized preset?"); }
+	QString LanguagePack::msg_19() { return tr("Are you sure you want to quit Will3D?"); }
+	QString LanguagePack::msg_20() { return tr("Choose correct control points again."); }
+	QString LanguagePack::msg_21() { return tr("3D photo processing. please wait."); }
+	QString LanguagePack::msg_22() { return tr("The OTF preset file is corrupted."); }
+	QString LanguagePack::msg_23() { return tr("The OTF preset file can not be found."); }
+	QString LanguagePack::msg_24() { return tr("Insufficient Graphic Card Memory."); }
+	QString LanguagePack::msg_25() { return tr("Please finish tracing first."); }
+	QString LanguagePack::msg_26() { return tr("Skin is invalid."); }
+	QString LanguagePack::msg_27() { return tr("Please execute surgery in 3d ceph tab."); }
+	QString LanguagePack::msg_28() { return tr("Please execute photo mapping."); }
+	QString LanguagePack::msg_29() { return tr("The picking point does not match."); }
+	QString LanguagePack::msg_30() { return tr("Save Project"); }
+	QString LanguagePack::msg_31() { return tr("The project has been saved."); }
+	QString LanguagePack::msg_32() { return tr("Not enough available storage space."); }
+	QString LanguagePack::msg_33() { return tr("Close Will3D"); }
+	QString LanguagePack::msg_34() { return tr("Remove Control Point"); }
+	QString LanguagePack::msg_35() { return tr("Add Control Point"); }
+	QString LanguagePack::msg_36() { return tr("Add Polygon"); }
+	QString LanguagePack::msg_37() { return tr("Remove Polygon"); }
+	QString LanguagePack::msg_38() { return tr("Remove Color"); }
+	QString LanguagePack::msg_39() { return tr("Modify Color"); }
+	QString LanguagePack::msg_40() { return tr("Add New Color"); }
+	QString LanguagePack::msg_41() { return tr("Remove the control point"); }
+	QString LanguagePack::msg_42() { return tr("Insert the control point"); }
+	QString LanguagePack::msg_43() { return tr("Delete this arch"); }
+	QString LanguagePack::msg_44() { return tr("Delete this nerve"); }
+	QString LanguagePack::msg_45() { return tr("Delete this line"); }
+	QString LanguagePack::msg_46() { return tr("Delete this path"); }
+	QString LanguagePack::msg_47() { return tr("Do you want to go to a face simulation tab?"); }
+	QString LanguagePack::msg_48() { return tr("Do you want to reset it?"); }
+	QString LanguagePack::msg_49() { return tr("Reduce the size of the image so that the program can operate smoothly."); }
+	QString LanguagePack::msg_50() { return tr("Do you want to go to a ceph tab?"); }
+	QString LanguagePack::msg_51() { return tr("Do you want to save this project before closing Will3D?"); }
+	QString LanguagePack::msg_52() { return tr("Maxillary plane"); }
+	QString LanguagePack::msg_53() { return tr("If you want to start tracing, you need to reset the tracing."); }
+	QString LanguagePack::msg_54() { return tr("Choose [Remove] to remove from database. Choose [Delete] to permanently delete this folder"); }
+	QString LanguagePack::msg_55() { return tr("Implant preset failed. Select implant first."); }
+	QString LanguagePack::msg_56() { return tr("Do you want to delete all implant presets in this page?"); }
+	QString LanguagePack::msg_57() { return tr("Current folder path is invalid. Select the correct path."); }
+	QString LanguagePack::msg_58() { return tr("Path is empty."); }
+	QString LanguagePack::msg_59() { return tr("Save STL file."); }
+	QString LanguagePack::msg_60() { return tr("Screenshot saved."); }
+	QString LanguagePack::msg_61() { return tr("An error occurred while saving the screenshot."); }
+	QString LanguagePack::msg_62() { return tr("STL file saved."); }
+	QString LanguagePack::msg_63() { return tr("An error occurred while saving the STL file."); }
+	QString LanguagePack::msg_64() { return tr("Login failed."); }
+	QString LanguagePack::msg_65() { return tr("The username or password you entered is incorrect."); }
+	QString LanguagePack::msg_66() { return tr("The email you entered is incorrect."); }
+	QString LanguagePack::msg_67() { return tr("Failed."); }
+	QString LanguagePack::msg_68() { return tr("Your new password is : "); }
+	QString LanguagePack::msg_69() { return tr("Username is empty."); }
+	QString LanguagePack::msg_70() { return tr("Password is empty."); }
+	QString LanguagePack::msg_71() { return tr("Email is empty."); }
+	QString LanguagePack::msg_72() { return tr("Are you sure you wish to delete this user?"); }
+	QString LanguagePack::msg_73() { return tr("DICOM open failed : Invalid modality."); }
+	QString LanguagePack::msg_74() { return tr("Project save failed : DICOM is not loaded."); }
+	QString LanguagePack::msg_75() { return tr("The arch is not drawn. Please draw an arch."); }
+	QString LanguagePack::msg_76() { return tr("TMJ box already exists. Do you want to delete existing one?"); }
+	QString LanguagePack::msg_77() { return tr("DB connection failed."); }
+	QString LanguagePack::msg_78() { return tr("Selected preset is not set in favorite list."); }
+	QString LanguagePack::msg_79() { return tr("Manufacturer name is empty."); }
+	QString LanguagePack::msg_80() { return tr("Product name is empty."); }
+	QString LanguagePack::msg_81() { return tr("Model name is empty."); }
+	QString LanguagePack::msg_82() { return tr("Coronal diameter is not valid."); }
+	QString LanguagePack::msg_83() { return tr("Apical diameter is not valid."); }
+	QString LanguagePack::msg_84() { return tr("length is not valid."); }
+	QString LanguagePack::msg_85() { return tr("Delete manufacturer?"); }
+	QString LanguagePack::msg_86() { return tr("Delete product?"); }
+	QString LanguagePack::msg_87() { return tr("Delete implant model?"); }
+	QString LanguagePack::msg_88() { return tr("Select the number of tooth to change the implant preference."); }
+	QString LanguagePack::msg_89() { return tr("Do you want to trace it again?"); }
+	QString LanguagePack::msg_90() { return tr("Insufficient Memory."); }
+	QString LanguagePack::msg_91() { return tr("A picking point isn't matching."); }
+	QString LanguagePack::msg_92() { return tr("Go to 3D Ceph tab"); }
+	QString LanguagePack::msg_93() { return tr("If you want to see a surgery simulation, execute surgery in 3D Ceph tab."); }
+}

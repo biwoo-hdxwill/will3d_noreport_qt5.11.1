@@ -1,0 +1,12 @@
+﻿#ifndef CLPLATFORM_GLOBAL_H
+#define CLPLATFORM_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef CLPLATFORM_LIB
+# define CLPLATFORM_EXPORT Q_DECL_EXPORT
+#else
+# define CLPLATFORM_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // CLPLATFORM_GLOBAL_H

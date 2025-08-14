@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="pacs">
+      <UniqueIdentifier>{2773d2d6-4d7f-45b0-acb9-8427b092f44f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="W3OTFView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View2D_forMPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3D_forMPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DCeph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DEndo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DEndoModify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DEndoSagittal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DEndoSlice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DFaceMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DFacePhoto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DImplantPreview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DMPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3DSI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3View3Dslice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ViewMPR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3ViewOTFPreset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3VTOSTO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_pano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_pano_arch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_pano_cross_section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implant_preference_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thyoo_W3View2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thyoo_W3View3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_bone_density.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_face.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_implant_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_implant_arch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_implant_cross_section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_implant_pano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_implant_sagittal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_lightbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_mpr_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_pano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_pano_arch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_pano_cross_section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_pano_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tmj_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tmj_axial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tmj_frontal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tmj_lateral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tmj_orientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewitems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W3OTFScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base_view_3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_view_3d.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_view_mpr.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+    <ClCompile Include="pacs_view_pano.cpp">
+      <Filter>pacs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="uicomponent_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_pano_orientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_tmj_orientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_mpr_orientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="base_view_3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="W3View2D.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ViewMPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3D.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DMPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DEndo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DEndoModify.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DEndoSlice.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DEndoSagittal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DSI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DImplantPreview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="thyoo_W3View2D.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="thyoo_W3View3D.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3VTOSTO.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3ViewOTFPreset.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_face.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_pano.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_pano_arch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_pano_cross_section.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="viewitems.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DFaceMesh.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DFacePhoto.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View2D_forMPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_implant_pano.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="implant_preference_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_view_pano.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_view_pano_arch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_view_pano_cross_section.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_implant_sagittal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_implant_arch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_implant_cross_section.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="scene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_implant_3d.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_bone_density.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3OTFScene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3OTFView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_lightbox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_tmj_axial.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3Dslice.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="base_view_orientation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_tmj_lateral.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_tmj_frontal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_tmj_3d.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3D_forMPR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="W3View3DCeph.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="view_3d.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_view_3d.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_view_mpr.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+    <QtMoc Include="pacs_view_pano.h">
+      <Filter>pacs</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

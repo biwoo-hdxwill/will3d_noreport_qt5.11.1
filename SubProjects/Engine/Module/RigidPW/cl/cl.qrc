@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/cl">
+        <file>Reduction.cl</file>
+        <file>Reorientation_POWELL.cl</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,13 @@
+﻿#ifndef UIGLOBJECTS_GLOBAL_H
+
+#define UIGLOBJECTS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef UIGLOBJECTS_LIB
+# define UIGLOBJECTS_EXPORT Q_DECL_EXPORT
+#else
+# define UIGLOBJECTS_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // UIGLOBJECTS_GLOBAL_H

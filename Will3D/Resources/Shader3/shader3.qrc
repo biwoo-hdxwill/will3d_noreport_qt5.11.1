@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/shader">
+        <file>MeshFillVertexColor_tex.frag</file>
+        <file>MeshFillVertexColor_tex.vert</file>
+    </qresource>
+</RCC>

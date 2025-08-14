@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/font">
+        <file>Roboto/Roboto-Regular.ttf</file>
+        <file>Noto Sans/NotoSans-Regular.ttf</file>
+    </qresource>
+</RCC>

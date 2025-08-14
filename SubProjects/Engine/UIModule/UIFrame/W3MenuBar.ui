@@ -1,0 +1,2734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CW3MenuBar</class>
+ <widget class="QWidget" name="CW3MenuBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1195</width>
+    <height>888</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>CW3MenuBar</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::West</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="movable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="FILE">
+      <attribute name="title">
+       <string>FILE</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="MPR">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="title">
+       <string>MPR</string>
+      </attribute>
+      <widget class="QToolButton" name="m_btnViewZooming">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>75</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Zoom</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnViewPanning">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>75</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Pan</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnViewResetMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>75</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnViewFit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>75</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Fit</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnReOrientation">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>75</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Orientation</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Reorientation</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnReOrionoffMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxNerveMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>200</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nerve</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxImplantMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>220</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Implant</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxFaceMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>240</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Face</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxSecondMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>310</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Second V.</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="m_sliderPhotoTransparencyMPR">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>280</y>
+         <width>71</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_12">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>260</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Face Transparency</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureTapeLine">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tape Line</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureTapeCurve">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>430</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tape Curve</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureDeleteAll">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>650</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>M Delete All</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawDeleteAll">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>690</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>D Delete All</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureRuler">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>390</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ruler</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureProfile">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>470</y>
+         <width>76</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Profile</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureAngle">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>450</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Angle</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureROI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>510</y>
+         <width>76</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>ROI</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureArea">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>490</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Area</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnMeasureDelete">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>630</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>M Delete</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="m_comboBoxMeasureSubMode">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>840</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawRectangle">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>530</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Rectangle</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawCircle">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>550</y>
+         <width>76</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Circle</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawArrow">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>570</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Arrow</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawFreeDraw">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>590</y>
+         <width>76</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>FreeDraw</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawNote">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>610</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Note</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnDrawDelete">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>670</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>D Delete</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="m_comboBoxDrawSubMode">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>860</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnVRCut">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>370</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>3D Cut</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnVOI">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>330</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>VOI</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnZoom3D">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>350</y>
+         <width>76</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>3D Zoom</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Panorama">
+      <attribute name="title">
+       <string>Panorama</string>
+      </attribute>
+      <widget class="QLabel" name="MeasureLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>300</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffPAN">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>320</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnAutoArch">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Auto Arch</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxNervePANO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nerve</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxImplantPANO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>430</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Implant</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnApplyOri">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>262</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Apply Orientation</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Implant">
+      <attribute name="title">
+       <string>Implant</string>
+      </attribute>
+      <widget class="QLabel" name="MeasureLabel_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>130</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffIMPLANT">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxImplantIMPLANT">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>260</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Implant</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxNerveIMPLANT">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>240</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nerve</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="FaceSimulation">
+      <attribute name="title">
+       <string>FaceSimulation</string>
+      </attribute>
+      <widget class="QLabel" name="MeasureLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>250</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffFACE">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>270</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>160</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Surfacing</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnSURFACINGonoffFACE">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>180</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPhotoOpen">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnRegiPoints">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Registration</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxFaceFACE">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>400</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Face</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="m_sliderPhotoTransparencyFACE">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>350</y>
+         <width>71</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_11">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>330</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Face Transparency</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="SuperImposition">
+      <attribute name="title">
+       <string>Super Imposition</string>
+      </attribute>
+      <widget class="QToolButton" name="m_btnDicomOpenFolderSI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>77</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Open Folder</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffSI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>160</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Show Volume</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_rbtnMainVolSI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>90</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Main</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_rbtnSecVolSI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>210</y>
+         <width>90</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Second</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_rbtnBothVolSI">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>230</y>
+         <width>90</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Both</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Endoscopy">
+      <attribute name="title">
+       <string>Endoscopy</string>
+      </attribute>
+      <widget class="QLabel" name="MeasureLabel_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>500</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>520</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath4DelENDO">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>150</y>
+         <width>21</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath2DelENDO">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>110</y>
+         <width>21</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnStopENDO">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>250</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string> ■</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_13">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>350</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Speed</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_37">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Free explore</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath1DelENDO">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>90</y>
+         <width>21</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath2ENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>110</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path2</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_radioCameraBackwardENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>470</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>backward</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnFREEonoffENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnNextENDO">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>250</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_radioCameraFixedENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>430</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>fixed</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath4ENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path4</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_38">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Camera dir</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="m_sldIntervalENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>310</y>
+         <width>91</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>4</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="m_radioCameraForwardENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>450</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>forward</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath5DelENDO">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>170</y>
+         <width>21</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_39">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>210</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Controller</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnEndENDO">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>230</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>|▶</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath3DelENDO">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>130</y>
+         <width>21</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnStartENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>230</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>◀|</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_40">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>290</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Interval</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPlayENDO">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>230</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>▶</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_41">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Path list</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath3ENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>130</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path3</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="m_sldSpeedENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>370</y>
+         <width>91</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath1ENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path1</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPath5ENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path5</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnPrevENDO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>250</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Ceph3D">
+      <attribute name="title">
+       <string>3D Ceph</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="TMJ">
+      <attribute name="title">
+       <string>TMJ</string>
+      </attribute>
+      <widget class="QLabel" name="MeasureLabel_17">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>50</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>w</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_34">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>300</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Left</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>ROI</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_24">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>w</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_33">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>250</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_20">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>70</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_36">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>360</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editVSliceThicknessLeft">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_30">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>210</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_35">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>340</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Right</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffTMJ">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>460</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_27">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>V gap</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_25">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>120</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_31">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>320</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editROIHeightRight">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_22">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>140</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editROIHeightLeft">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editVSliceGapLeft">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>210</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_18">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>h</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_19">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>50</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mm</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_28">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>280</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>V thickness</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editROIWidthLeft">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_29">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Left</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editROIWidthRight">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editVSliceThicknessRight">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>360</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_23">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Right</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_32">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>230</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Right</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_21">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Left</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxImplantTMJ">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Implant</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_14">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>440</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxNerveTMJ">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>390</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nerve</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_26">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>140</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>h</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="m_editVSliceGapRight">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>250</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Orthodontic">
+      <attribute name="title">
+       <string>Orthodontic</string>
+      </attribute>
+      <widget class="QCheckBox" name="m_checkBoxNerveORTHO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nerve</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MeasureLabel_15">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OTF</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="m_btnOTFonoffORTHO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>On/Off</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="m_checkBoxImplantORTHO">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>140</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Implant</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Report">
+      <attribute name="title">
+       <string>Report</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>m_btnViewZooming</tabstop>
+  <tabstop>m_btnViewPanning</tabstop>
+  <tabstop>m_btnViewFit</tabstop>
+  <tabstop>m_btnViewResetMPR</tabstop>
+  <tabstop>m_btnReOrientation</tabstop>
+  <tabstop>m_btnOTFonoffMPR</tabstop>
+  <tabstop>m_btnReOrionoffMPR</tabstop>
+  <tabstop>m_checkBoxNerveMPR</tabstop>
+  <tabstop>m_checkBoxImplantMPR</tabstop>
+  <tabstop>m_checkBoxFaceMPR</tabstop>
+  <tabstop>m_sliderPhotoTransparencyMPR</tabstop>
+  <tabstop>m_checkBoxSecondMPR</tabstop>
+  <tabstop>m_btnVOI</tabstop>
+  <tabstop>m_btnZoom3D</tabstop>
+  <tabstop>m_btnVRCut</tabstop>
+  <tabstop>m_btnMeasureRuler</tabstop>
+  <tabstop>m_btnMeasureTapeLine</tabstop>
+  <tabstop>m_btnMeasureTapeCurve</tabstop>
+  <tabstop>m_btnMeasureAngle</tabstop>
+  <tabstop>m_btnMeasureProfile</tabstop>
+  <tabstop>m_btnMeasureArea</tabstop>
+  <tabstop>m_btnMeasureROI</tabstop>
+  <tabstop>m_btnDrawRectangle</tabstop>
+  <tabstop>m_btnDrawCircle</tabstop>
+  <tabstop>m_btnDrawArrow</tabstop>
+  <tabstop>m_btnDrawFreeDraw</tabstop>
+  <tabstop>m_btnDrawNote</tabstop>
+  <tabstop>m_btnMeasureDelete</tabstop>
+  <tabstop>m_btnMeasureDeleteAll</tabstop>
+  <tabstop>m_btnDrawDelete</tabstop>
+  <tabstop>m_btnDrawDeleteAll</tabstop>
+  <tabstop>m_comboBoxDrawSubMode</tabstop>
+  <tabstop>m_btnOTFonoffPAN</tabstop>
+  <tabstop>m_btnAutoArch</tabstop>
+  <tabstop>m_checkBoxNervePANO</tabstop>
+  <tabstop>m_checkBoxImplantPANO</tabstop>
+  <tabstop>m_btnApplyOri</tabstop>
+  <tabstop>m_btnOTFonoffIMPLANT</tabstop>
+  <tabstop>m_checkBoxImplantIMPLANT</tabstop>
+  <tabstop>m_checkBoxNerveIMPLANT</tabstop>
+  <tabstop>m_btnOTFonoffFACE</tabstop>
+  <tabstop>m_btnSURFACINGonoffFACE</tabstop>
+  <tabstop>m_btnPhotoOpen</tabstop>
+  <tabstop>m_btnRegiPoints</tabstop>
+  <tabstop>m_checkBoxFaceFACE</tabstop>
+  <tabstop>m_sliderPhotoTransparencyFACE</tabstop>
+  <tabstop>m_btnDicomOpenFolderSI</tabstop>
+  <tabstop>m_btnOTFonoffSI</tabstop>
+  <tabstop>m_rbtnMainVolSI</tabstop>
+  <tabstop>m_rbtnSecVolSI</tabstop>
+  <tabstop>m_rbtnBothVolSI</tabstop>
+  <tabstop>m_btnOTFonoffENDO</tabstop>
+  <tabstop>m_btnPath4DelENDO</tabstop>
+  <tabstop>m_btnPath2DelENDO</tabstop>
+  <tabstop>m_btnStopENDO</tabstop>
+  <tabstop>m_btnPath1DelENDO</tabstop>
+  <tabstop>m_btnPath2ENDO</tabstop>
+  <tabstop>m_radioCameraBackwardENDO</tabstop>
+  <tabstop>m_btnFREEonoffENDO</tabstop>
+  <tabstop>m_btnNextENDO</tabstop>
+  <tabstop>m_radioCameraFixedENDO</tabstop>
+  <tabstop>m_btnPath4ENDO</tabstop>
+  <tabstop>m_sldIntervalENDO</tabstop>
+  <tabstop>m_radioCameraForwardENDO</tabstop>
+  <tabstop>m_btnPath5DelENDO</tabstop>
+  <tabstop>m_btnEndENDO</tabstop>
+  <tabstop>m_btnPath3DelENDO</tabstop>
+  <tabstop>m_btnStartENDO</tabstop>
+  <tabstop>m_btnPlayENDO</tabstop>
+  <tabstop>m_btnPath3ENDO</tabstop>
+  <tabstop>m_sldSpeedENDO</tabstop>
+  <tabstop>m_btnPath1ENDO</tabstop>
+  <tabstop>m_btnPath5ENDO</tabstop>
+  <tabstop>m_btnPrevENDO</tabstop>
+  <tabstop>m_editVSliceThicknessLeft</tabstop>
+  <tabstop>m_btnOTFonoffTMJ</tabstop>
+  <tabstop>m_editROIHeightRight</tabstop>
+  <tabstop>m_editROIHeightLeft</tabstop>
+  <tabstop>m_editVSliceGapLeft</tabstop>
+  <tabstop>m_editROIWidthLeft</tabstop>
+  <tabstop>m_editROIWidthRight</tabstop>
+  <tabstop>m_editVSliceThicknessRight</tabstop>
+  <tabstop>m_checkBoxImplantTMJ</tabstop>
+  <tabstop>m_checkBoxNerveTMJ</tabstop>
+  <tabstop>m_editVSliceGapRight</tabstop>
+  <tabstop>m_checkBoxNerveORTHO</tabstop>
+  <tabstop>m_btnOTFonoffORTHO</tabstop>
+  <tabstop>m_checkBoxImplantORTHO</tabstop>
+  <tabstop>m_comboBoxMeasureSubMode</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,698 @@
+#include "implant_resource.h"
+
+#if defined(__APPLE__)
+#include <glm/gtx/transform2.hpp>
+#else
+#include <GL/glm/gtx/transform2.hpp>
+#endif
+
+#include <QDebug>
+#include <QDataStream>
+#include <QFile>
+#include <QFileInfo>
+
+#include "../../Common/Common/W3Logger.h"
+#include "../../Common/GLfunctions/W3GLTypes.h"
+#include "include/implant_data.h"
+
+using namespace implant_resource;
+
+namespace
+{
+	const glm::vec3 kZeroVector(0.0f);
+	const float kLengthMajorAxisMM = 20.0f;
+	class Vec3Less
+	{
+	public:
+		bool operator()(const glm::vec3& v0, const glm::vec3& v1) const
+		{
+			return v0.x < v1.x || (v0.x == v1.x && v0.y < v1.y) ||
+				(v0.x == v1.x && v0.y == v1.y && v0.z < v1.z);
+		}
+	};
+}  // namespace
+ImplantResource::ImplantResource() {}
+
+ImplantResource::~ImplantResource() {}
+
+void ImplantResource::Initialize(float pixel_spacing, float slice_spacing)
+{
+	pixel_spacing_ = pixel_spacing;
+	slice_spacing_ = slice_spacing;
+	initialized_ = true;
+}
+
+bool ImplantResource::AddImplant(
+	const implant_resource::ImplantInfo& implant_params)
+{
+	if (!initialized_)
+	{
+		common::Logger::instance()->Print(
+			common::LogType::ERR,
+			QString("ImplantResource is not initialized.").toStdString());
+		return false;
+	}
+
+	glm::mat3 rotate = GetImplantModelRotate(implant_params.file_path,
+		implant_params.manufacturer,
+		implant_params.product);
+
+	std::vector<glm::vec3> mesh_verts, mesh_normals;
+	std::vector<unsigned int> mesh_indices;
+	glm::vec3 bounding_box_min, bounding_box_max;
+	glm::vec3 major_axis;
+
+	bool is_custom_implant = implant_params.manufacturer[0] == kCustomImplantManufacturerNamePrefix;
+
+	bool load_success = false;
+	
+	if (is_custom_implant)
+	{
+		load_success = LoadCustomImplant(
+			implant_params,
+			&mesh_verts, 
+			&mesh_normals, 
+			&mesh_indices,
+			&bounding_box_max, 
+			&bounding_box_min, 
+			&major_axis
+		);
+	}
+	else
+	{
+		load_success = LoadImplantFileWIM(
+			implant_params.file_path, rotate, implant_params.platform_diameter,
+			implant_params.total_length, &mesh_verts, &mesh_normals, &mesh_indices,
+			&bounding_box_max, &bounding_box_min, &major_axis);
+	}
+
+	if (!load_success)
+	{
+		return false;
+	}
+
+	ImplantData::InitPack pack_init_implant_data;
+	pack_init_implant_data.implant_id = implant_params.id;
+	pack_init_implant_data.diameter = implant_params.diameter;
+	pack_init_implant_data.length = implant_params.length;
+	pack_init_implant_data.platform_diameter = implant_params.platform_diameter;
+	pack_init_implant_data.custom_apical_diameter = implant_params.custom_apical_diameter;
+	pack_init_implant_data.total_length = implant_params.total_length;
+	pack_init_implant_data.manufacturer = implant_params.manufacturer;
+	pack_init_implant_data.product = implant_params.product;
+	pack_init_implant_data.file_path = implant_params.file_path;
+	pack_init_implant_data.sub_category = implant_params.sub_category;
+	pack_init_implant_data.mesh_vertices = mesh_verts;
+	pack_init_implant_data.mesh_normals = mesh_normals;
+	pack_init_implant_data.mesh_indices = mesh_indices;
+	pack_init_implant_data.bounding_box_max = bounding_box_max;
+	pack_init_implant_data.bounding_box_min = bounding_box_min;
+	pack_init_implant_data.spacing = std::min(pixel_spacing_, slice_spacing_);
+	pack_init_implant_data.major_axis = major_axis;
+
+	data_[implant_params.id].reset(new ImplantData(pack_init_implant_data));
+	data_[implant_params.id]->set_is_visible(is_visible_all_);
+
+	add_implant_id_ = implant_params.id;
+	return true;
+}
+
+bool ImplantResource::ChangeImplant(
+	const implant_resource::ImplantInfo& implant_params)
+{
+	if (!initialized_)
+	{
+		common::Logger::instance()->Print(
+			common::LogType::ERR,
+			QString("ImplantResource is not initialized.").toStdString());
+		assert(false);
+		return false;
+	}
+
+	glm::mat3 rotate = GetImplantModelRotate(implant_params.file_path,
+		implant_params.manufacturer,
+		implant_params.product);
+	glm::vec3 pos_in_vol = data_[implant_params.id]->position_in_vol();
+	bool is_visible = data_[implant_params.id]->is_visible();
+
+	std::vector<glm::vec3> mesh_verts, mesh_normals;
+	std::vector<unsigned int> mesh_indices;
+	glm::vec3 bounding_box_min, bounding_box_max;
+	glm::vec3 major_axis;
+
+	bool is_custom_implant = implant_params.manufacturer[0] == kCustomImplantManufacturerNamePrefix;
+
+	bool load_success = false;
+
+	if (is_custom_implant)
+	{
+		load_success = LoadCustomImplant(
+			implant_params,
+			&mesh_verts,
+			&mesh_normals,
+			&mesh_indices,
+			&bounding_box_max,
+			&bounding_box_min,
+			&major_axis
+		);
+	}
+	else
+	{
+		load_success = LoadImplantFileWIM(
+			implant_params.file_path, rotate, implant_params.platform_diameter,
+			implant_params.total_length, &mesh_verts, &mesh_normals, &mesh_indices,
+			&bounding_box_max, &bounding_box_min, &major_axis);
+	}
+
+	if (!load_success)
+	{
+		return false;
+	}
+
+	ImplantData::InitPack pack_init_implant_data;
+	pack_init_implant_data.implant_id = implant_params.id;
+	pack_init_implant_data.diameter = implant_params.diameter;
+	pack_init_implant_data.length = implant_params.length;
+	pack_init_implant_data.platform_diameter = implant_params.platform_diameter;
+	pack_init_implant_data.custom_apical_diameter = implant_params.custom_apical_diameter;
+	pack_init_implant_data.total_length = implant_params.total_length;
+	pack_init_implant_data.manufacturer = implant_params.manufacturer;
+	pack_init_implant_data.product = implant_params.product;
+	pack_init_implant_data.file_path = implant_params.file_path;
+	pack_init_implant_data.sub_category = implant_params.sub_category;
+	pack_init_implant_data.mesh_vertices = mesh_verts;
+	pack_init_implant_data.mesh_normals = mesh_normals;
+	pack_init_implant_data.mesh_indices = mesh_indices;
+	pack_init_implant_data.bounding_box_max = bounding_box_max;
+	pack_init_implant_data.bounding_box_min = bounding_box_min;
+	pack_init_implant_data.spacing = std::min(pixel_spacing_, slice_spacing_);
+	pack_init_implant_data.major_axis = major_axis;
+
+	struct PrevRotateMats
+	{
+		glm::mat4 pano;
+		glm::mat4 pano_plane;
+		glm::mat4 vol;
+
+		bool is_set_prev = false;
+	};
+	PrevRotateMats prev_rotates;
+	if (data_.find(implant_params.id) != data_.end())
+	{
+		prev_rotates.pano = data_[implant_params.id]->rotate_in_pano();
+		prev_rotates.vol = data_[implant_params.id]->rotate_in_vol();
+		prev_rotates.pano_plane = data_[implant_params.id]->rotate_in_pano_plane();
+		prev_rotates.is_set_prev = true;
+	}
+
+	data_[implant_params.id].reset(new ImplantData(pack_init_implant_data));
+	data_[implant_params.id]->set_is_visible(is_visible);
+	data_[implant_params.id]->set_position_in_vol(pos_in_vol);
+
+	if (prev_rotates.is_set_prev)
+	{
+		data_[implant_params.id]->set_rotate_in_vol(prev_rotates.vol);
+		data_[implant_params.id]->set_rotate_in_pano(prev_rotates.pano);
+		data_[implant_params.id]->set_rotate_in_pano_plane(prev_rotates.pano_plane);
+	}
+
+	return true;
+}
+
+void ImplantResource::SetImplantPositionInVol(int implant_id,
+	const glm::vec3& pt_in_vol,
+	const glm::vec3& pt_in_vol_gl)
+{
+	if (!IsValidImplant(implant_id))
+	{
+		common::Logger::instance()->Print(common::LogType::ERR,
+			QString("implant(%1) is not initialized.")
+			.arg(implant_id)
+			.toStdString());
+		assert(false);
+		return;
+	}
+	data_[implant_id]->set_position_in_vol(pt_in_vol);
+	data_[implant_id]->set_translate_in_vol(glm::translate(pt_in_vol_gl));
+}
+void ImplantResource::SetImplantPositionInPano(int implant_id,
+	const glm::vec3& pt_in_pano,
+	const glm::vec3& pt_in_pano_gl)
+{
+	if (!IsValidImplant(implant_id))
+	{
+		common::Logger::instance()->Print(common::LogType::ERR,
+			QString("implant(%1) is not initialized.")
+			.arg(implant_id)
+			.toStdString());
+		assert(false);
+		return;
+	}
+	data_[implant_id]->set_position_in_pano(pt_in_pano);
+	data_[implant_id]->set_translate_in_pano(glm::translate(pt_in_pano_gl));
+}
+void ImplantResource::SetImplantPositionInPanoPlane(
+	int implant_id, const glm::vec3& pt_in_pano_plane,
+	const glm::vec3& pt_in_pano_plane_gl)
+{
+	if (!IsValidImplant(implant_id)) return;
+	data_[implant_id]->set_position_in_pano_plane(pt_in_pano_plane);
+	data_[implant_id]->set_translate_in_pano_plane(
+		glm::translate(pt_in_pano_plane_gl));
+}
+
+void ImplantResource::SetImplantTranslateInVol(int implant_id, const glm::mat4& translate_matrix)
+{
+	if (!IsValidImplant(implant_id))
+	{
+		return;
+	}
+	data_[implant_id]->set_translate_in_vol(translate_matrix);
+}
+
+void ImplantResource::SetImplantRotateInVol(int implant_id,
+	const glm::mat4& rotate_matrix)
+{
+	if (!IsValidImplant(implant_id)) return;
+	data_[implant_id]->set_rotate_in_vol(rotate_matrix);
+}
+void ImplantResource::SetImplantRotateInPano(int implant_id,
+	const glm::mat4& rotate_matrix)
+{
+	if (!IsValidImplant(implant_id)) return;
+	data_[implant_id]->set_rotate_in_pano(rotate_matrix);
+}
+void ImplantResource::SetImplantRotateInPanoPlane(
+	int implant_id, const glm::mat4& rotate_matrix)
+{
+	if (!IsValidImplant(implant_id)) return;
+	data_[implant_id]->set_rotate_in_pano_plane(rotate_matrix);
+}
+void ImplantResource::EditImplantRotateInVol(int implant_id,
+	const glm::mat4& delta_rotate)
+{
+	if (!IsValidImplant(implant_id)) return;
+	glm::mat4 curr_rotate = data_[implant_id]->rotate_in_vol();
+	data_[implant_id]->set_rotate_in_vol(delta_rotate * curr_rotate);
+}
+void ImplantResource::EditImplantRotateInPano(int implant_id,
+	const glm::mat4& delta_rotate)
+{
+	if (!IsValidImplant(implant_id)) return;
+	glm::mat4 curr_rotate = data_[implant_id]->rotate_in_pano();
+	data_[implant_id]->set_rotate_in_pano(delta_rotate * curr_rotate);
+}
+void ImplantResource::EditImplantRotateInPanoPlane(
+	int implant_id, const glm::mat4& delta_rotate)
+{
+	if (!IsValidImplant(implant_id)) return;
+	glm::mat4 curr_rotate = data_[implant_id]->rotate_in_pano_plane();
+	data_[implant_id]->set_rotate_in_pano_plane(delta_rotate * curr_rotate);
+}
+void ImplantResource::SetImplantAxisPointInVol(int implant_id,
+	const glm::vec3& point)
+{
+	data_[implant_id]->set_axis_point_in_vol(point);
+}
+void ImplantResource::SetImplantAxisPointInPano(int implant_id,
+	const glm::vec3& point)
+{
+	data_[implant_id]->set_axis_point_in_pano(point);
+}
+void ImplantResource::SetImplantAxisPointInPanoPlane(int implant_id,
+	const glm::vec3& point)
+{
+	data_[implant_id]->set_axis_point_in_pano_plane(point);
+}
+void ImplantResource::SetImplantPlaced()
+{
+	selected_implant_id_ = add_implant_id_;
+	add_implant_id_ = -1;
+}
+
+void ImplantResource::SelectImplant(int implant_id, bool selected)
+{
+	if (data().find(implant_id) == data().end())
+	{
+		selected_implant_id_ = -1;
+	}
+	else
+	{
+		selected_implant_id_ = selected ? implant_id : -1;
+	}
+}
+
+void ImplantResource::SetCollideIds(
+	const std::vector<int>& collided_implant_ids)
+{
+	for (auto& elem : data_)
+	{
+		elem.second->set_is_collide(false);
+	}
+
+	for (const auto& elem : collided_implant_ids)
+	{
+		auto& iter = data_.find(elem);
+		if (iter != data_.end())
+		{
+			iter->second->set_is_collide(true);
+		}
+	}
+}
+
+void ImplantResource::RemoveAll()
+{
+	for (auto& data_at : data_)
+	{
+		data_at.second.release();
+	}
+
+	data_.clear();
+
+	selected_implant_id_ = -1;
+	add_implant_id_ = -1;
+}
+
+void ImplantResource::RemoveAt(const int& implant_id)
+{
+	if (data_[implant_id] != nullptr)
+	{
+		data_[implant_id].release();
+		data_.erase(implant_id);
+
+		if (implant_id == selected_implant_id_) selected_implant_id_ = -1;
+
+		if (add_implant_id_ == implant_id) add_implant_id_ = -1;
+	}
+}
+void ImplantResource::SetVisibleAll(const bool& is_visible)
+{
+	is_visible_all_ = is_visible;
+	for (const auto& elem : data_)
+		elem.second->set_is_visible(is_visible);
+}
+bool ImplantResource::IsSetImplant() const
+{
+	return (data_.empty()) ? false : true;
+}
+bool ImplantResource::LoadImplantFileWIM(
+	const QString& implant_file_path, const glm::mat3& implant_rotate,
+	const float& diameter, const float& length,
+	std::vector<glm::vec3>* mesh_verts, std::vector<glm::vec3>* mesh_normals,
+	std::vector<unsigned int>* mesh_indices, glm::vec3* bounding_box_max,
+	glm::vec3* bounding_box_min, glm::vec3* major_axis)
+{
+	QFile file_stl(implant_file_path);
+	QFileInfo file_info_stl(implant_file_path);
+	common::Logger::instance()->Print(common::LogType::INF,
+		QString("load implant path = %1")
+		.arg(file_info_stl.absoluteFilePath())
+		.toStdString());
+
+	if (!file_stl.open(QIODevice::ReadOnly))
+	{
+		common::Logger::instance()->Print(
+			common::LogType::ERR, QString("implant loading failed.").toStdString());
+		return false;
+	}
+
+	file_stl.seek(0);
+	QDataStream data_stream(&file_stl);
+	data_stream.setByteOrder(QDataStream::LittleEndian);
+	data_stream.setFloatingPointPrecision(QDataStream::SinglePrecision);
+
+	uint cnt_triangles;
+	QString uuid;
+	data_stream >> uuid;
+	data_stream >> cnt_triangles;
+
+	std::vector<glm::vec3> face_normals;
+	face_normals.reserve(cnt_triangles);
+
+	std::vector<std::pair<Triangle, int>> tri_for_zorder;
+	tri_for_zorder.reserve(cnt_triangles);
+
+	int curr_triangle = 0;
+	while (curr_triangle < cnt_triangles)
+	{
+		float nx, ny, nz, x[3], y[3], z[3];
+
+		data_stream >> x[0] >> y[0] >> z[0] >> x[1] >> y[1] >> z[1] >> x[2] >>
+			y[2] >> z[2] >> nx >> ny >> nz;
+
+		// add new data
+		Triangle T = { glm::vec3(x[0], y[0], z[0]), glm::vec3(x[1], y[1], z[1]),
+					  glm::vec3(x[2], y[2], z[2]) };
+		tri_for_zorder.push_back(std::pair<Triangle, int>(T, curr_triangle));
+		face_normals.push_back(glm::vec3(nx, ny, nz));
+		++curr_triangle;
+	}
+	file_stl.close();
+
+	////sort rotate direction.
+	glm::vec3 rotDir = implant_rotate * glm::vec3(0.0f, 0.0f, 1.0f);
+	std::sort(tri_for_zorder.begin(), tri_for_zorder.end(),
+		[&](const std::pair<Triangle, int>& T1,
+			const std::pair<Triangle, int>& T2) -> bool
+	{
+		float d1 = glm::dot(
+			rotDir, (T1.first.v0 + T1.first.v1 + T1.first.v2) / 3.0f);
+		float d2 = glm::dot(
+			rotDir, (T2.first.v0 + T2.first.v1 + T2.first.v2) / 3.0f);
+		return d1 < d2;
+	});
+
+	mesh_verts->clear();
+	mesh_verts->reserve(tri_for_zorder.size() * 3);
+
+	mesh_indices->clear();
+	mesh_indices->reserve(tri_for_zorder.size() * 3);
+
+	std::map<glm::vec3, std::vector<int>, Vec3Less> map_vert_idx;
+	std::vector<glm::vec3> z_norm;
+	z_norm.reserve(tri_for_zorder.size() * 3);
+
+	for (int i = 0; i < tri_for_zorder.size(); i++)
+	{
+		const Triangle& T = tri_for_zorder[i].first;
+		int idx = tri_for_zorder[i].second;
+		mesh_verts->push_back(T.v0);
+		mesh_verts->push_back(T.v1);
+		mesh_verts->push_back(T.v2);
+
+		const glm::vec3& n = face_normals[idx];
+		z_norm.push_back(n);
+		z_norm.push_back(n);
+		z_norm.push_back(n);
+
+		const int idx_0 = i * 3;
+		const int idx_1 = idx_0 + 1;
+		const int idx_2 = idx_0 + 2;
+		map_vert_idx[mesh_verts->at(idx_0)].push_back(idx_0);
+		map_vert_idx[mesh_verts->at(idx_1)].push_back(idx_1);
+		map_vert_idx[mesh_verts->at(idx_2)].push_back(idx_2);
+		mesh_indices->push_back(idx_0);
+		mesh_indices->push_back(idx_1);
+		mesh_indices->push_back(idx_2);
+	}
+
+	float max_float = std::numeric_limits<float>::max();
+	float min_float = std::numeric_limits<float>::min();
+	glm::vec3 bb_min = glm::vec3(max_float, max_float, max_float);
+	glm::vec3 bb_max = glm::vec3(min_float, min_float, min_float);
+
+	for (int i = 0; i < mesh_verts->size(); i++)
+	{
+		const glm::vec3& vert = mesh_verts->at(i);
+		bb_max = glm::max(bb_max, vert);
+		bb_min = glm::min(bb_min, vert);
+
+		const glm::vec3& plat_normal = z_norm[i];
+		const auto& mapIter = map_vert_idx.find(mesh_verts->at(i));
+		if (mapIter != map_vert_idx.end())
+		{
+			const std::vector<int>& indices = mapIter->second;
+			glm::vec3 normal = kZeroVector;
+			for (const auto& index : indices)
+			{
+				const glm::vec3& smooth_normal = z_norm[index];
+				if (glm::length(smooth_normal - plat_normal) < 0.35f)
+					normal += smooth_normal;
+			}
+
+			mesh_normals->push_back(glm::normalize(normal));
+		}
+	}
+
+	glm::vec3 implant_center = (bb_max + bb_min) * 0.5f;
+	glm::vec3 to_normalized_gl = 2.0f / (bb_max - bb_min);
+
+	glm::vec3 to_voxel =
+		glm::vec3(diameter / pixel_spacing_, diameter / pixel_spacing_,
+			length / slice_spacing_);
+
+	for (int i = 0; i < mesh_verts->size(); i++)
+	{
+		mesh_verts->at(i) = (mesh_verts->at(i) - implant_center) *
+			to_normalized_gl * implant_rotate * to_voxel;
+		mesh_normals->at(i) = mesh_normals->at(i) * implant_rotate;
+	}
+
+	glm::vec3 rotated_bb_min = (bb_min - implant_center) * to_normalized_gl * implant_rotate * to_voxel;
+	glm::vec3 rotated_bb_max = (bb_max - implant_center) * to_normalized_gl * implant_rotate * to_voxel;
+
+	*bounding_box_min = glm::vec3(
+		std::min(rotated_bb_min.x, rotated_bb_max.x),
+		std::min(rotated_bb_min.y, rotated_bb_max.y),
+		std::min(rotated_bb_min.z, rotated_bb_max.z)
+	);
+	*bounding_box_max = glm::vec3(
+		std::max(rotated_bb_min.x, rotated_bb_max.x),
+		std::max(rotated_bb_min.y, rotated_bb_max.y),
+		std::max(rotated_bb_min.z, rotated_bb_max.z)
+	);
+
+	*major_axis = glm::vec3(0.0f, 0.0f, 1.0f) * (abs(bounding_box_max->z - bounding_box_min->z));
+	*major_axis += glm::vec3(0.0f, 0.0f, kLengthMajorAxisMM / pixel_spacing_) * 2.0f;
+
+	return true;
+}
+
+bool ImplantResource::LoadCustomImplant(
+	const implant_resource::ImplantInfo& info,
+	std::vector<glm::vec3>* mesh_verts,
+	std::vector<glm::vec3>* mesh_normals,
+	std::vector<unsigned int>* mesh_indices,
+	glm::vec3* bounding_box_max,
+	glm::vec3* bounding_box_min,
+	glm::vec3* major_axis
+)
+{
+	bool result = false;
+	result = LoadImplantFileWIM(
+		info.file_path,
+		glm::mat3(1.0f),
+		info.platform_diameter,
+		info.total_length, 
+		mesh_verts, 
+		mesh_normals, 
+		mesh_indices,
+		bounding_box_max, 
+		bounding_box_min, 
+		major_axis
+	);
+
+	if (!result)
+	{
+		return result;
+	}
+
+	if (info.custom_apical_diameter <= 0.0f ||
+		info.platform_diameter <= 0.0f)
+	{
+		return result;
+	}
+
+	float diameter_ratio = info.custom_apical_diameter / info.platform_diameter;
+	for (int i = 0; i < mesh_verts->size(); ++i)
+	{
+		glm::vec3 vertex = mesh_verts->at(i);
+		float vertex_z = vertex.z;
+		if (vertex_z > 0)
+		{
+			continue;
+		}
+
+		glm::vec3 apical_vertex(vertex.x * diameter_ratio, vertex.y * diameter_ratio, vertex.z);
+		(*mesh_verts)[i] = apical_vertex;
+	}
+
+	return result;
+}
+
+glm::mat3 ImplantResource::GetImplantModelRotate(
+	const QString& implant_file_path, const QString& manufacturer,
+	const QString& product)
+{
+	if (manufacturer[0] == kCustomImplantManufacturerNamePrefix)
+	{
+		return glm::mat3(1.0f);
+	}
+
+	if (manufacturer.compare("DIO", Qt::CaseInsensitive) == 0)
+	{
+		QStringList listFilePath = implant_file_path.split('/');
+		QString fileName = listFilePath.at(listFilePath.size() - 1);
+		if (product.compare("UF II", Qt::CaseInsensitive) == 0 && fileName.toLower().contains("n"))
+		{
+			return glm::mat3(glm::rotate(glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+		}
+		else
+		{
+			return glm::mat3(1.0f);
+		}
+	}
+	else if (manufacturer.compare("MEGAGEN", Qt::CaseInsensitive) == 0)
+	{
+		if (product.contains("ST", Qt::CaseInsensitive))
+		{
+			return glm::mat3(glm::rotate(glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+		}
+		else if (product.contains("BLUEDIAMOND", Qt::CaseInsensitive))
+		{
+			return glm::mat3(glm::rotate(glm::radians(180.f), glm::vec3(1.f, 0.f, 0.f)));
+		}
+		else
+		{
+			return glm::mat3(1.0f);
+		}
+	}
+	else if (manufacturer.compare("Neobiotech", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("NeoImplant", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("DENTIS", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("Shinhung", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("Uris", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("Biotem Implant", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("Warantec", Qt::CaseInsensitive) == 0)
+	{
+		return glm::mat3(glm::rotate(glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+	}
+	else if (manufacturer.compare("IBS", Qt::CaseInsensitive) == 0 ||
+		manufacturer.compare("IBS Implant", Qt::CaseInsensitive) == 0)
+		//else if (manufacturer.compare("IBS Implant", Qt::CaseInsensitive) == 0)
+	{
+		QString implant_name = QFileInfo(implant_file_path).fileName();
+		if (implant_name.contains("M3", Qt::CaseInsensitive))
+		{
+			return glm::mat3(1.0f);
+		}
+		else
+		{
+			return glm::mat3(glm::rotate(glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f)));
+		}
+	}
+	else if (manufacturer.compare("Osstem", Qt::CaseInsensitive) == 0)
+	{
+		return glm::mat3(glm::rotate(glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+	}
+	else if (manufacturer.compare("Straumann", Qt::CaseInsensitive) == 0)
+	{
+		return glm::mat3(1.0f);
+	}
+	else
+	{
+		return glm::mat3(1.0f);
+	}
+}
+bool ImplantResource::IsValidImplant(int implant_id) const
+{
+	if (!initialized_)
+	{
+		common::Logger::instance()->Print(common::LogType::ERR,
+			"ImplantResource is not initialized.");
+		assert(false);
+		return false;
+	}
+
+	return (data_.find(implant_id) != data_.end()) ? true : false;
+}
