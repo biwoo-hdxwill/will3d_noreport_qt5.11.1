@@ -383,43 +383,48 @@ void CW3MPRtab::SetVisibleWindowsTRD(bool visible)
 
 void CW3MPRtab::SetVisibleWindowsDefaultAndMaximize(bool visible)
 {
-	if (visible)
-	{
-		window_axial_->resize(axial_rect_.width(), axial_rect_.height());
-		window_axial_->raise();
-		window_sagittal_->resize(sagittal_rect_.width(), sagittal_rect_.height());
-		window_sagittal_->raise();
-		window_coronal_->resize(coronal_rect_.width(), coronal_rect_.height());
-		window_coronal_->raise();
-		window_vr_->resize(vr_rect_.width(), vr_rect_.height());
-		window_vr_->raise();
-		window_vr_zoom_3d_->resize(vr_zoom_3d_rect_.width(), vr_zoom_3d_rect_.height());
-		window_vr_zoom_3d_->raise();
+  bool is_zoom_3d_on = task_tool_->IsZoom3DOn();
+  const QPoint offScreen(-10000, -10000);
 
-		if (m_pMPRViewMgr)
-		{
-			m_pMPRViewMgr->GetViewMPR(MPRViewType::AXIAL)->update();
-			m_pMPRViewMgr->GetViewMPR(MPRViewType::SAGITTAL)->update();
-			m_pMPRViewMgr->GetViewMPR(MPRViewType::CORONAL)->update();
+  if (visible)
+  {
+    window_axial_->move(axial_rect_.topLeft());
+    window_axial_->resize(axial_rect_.size());
+    window_axial_->raise();
 
-			m_pMPRViewMgr->InitMPRItems(MPRViewType::AXIAL);
-			m_pMPRViewMgr->InitMPRItems(MPRViewType::SAGITTAL);
-			m_pMPRViewMgr->InitMPRItems(MPRViewType::CORONAL);
-		}
-	}
-	else
-	{
-		window_axial_->resize(QSize(0, 0));
-		window_axial_->lower();
-		window_sagittal_->resize(QSize(0, 0));
-		window_sagittal_->lower();
-		window_coronal_->resize(QSize(0, 0));
-		window_coronal_->lower();
-		window_vr_->resize(QSize(0, 0));
-		window_vr_->lower();
-		window_vr_zoom_3d_->resize(QSize(0, 0));
-		window_vr_zoom_3d_->lower();
-	}
+    window_sagittal_->move(sagittal_rect_.topLeft());
+    window_sagittal_->resize(sagittal_rect_.size());
+    window_sagittal_->raise();
+
+    if (is_zoom_3d_on)
+    {
+      window_coronal_->move(offScreen);
+
+      window_vr_zoom_3d_->move(vr_zoom_3d_rect_.topLeft());
+      window_vr_zoom_3d_->resize(vr_zoom_3d_rect_.size());
+      window_vr_zoom_3d_->raise();
+    }
+    else
+    {
+      window_coronal_->move(coronal_rect_.topLeft());
+      window_coronal_->resize(coronal_rect_.size());
+      window_coronal_->raise();
+
+      window_vr_zoom_3d_->move(offScreen);
+    }
+
+    window_vr_->move(vr_rect_.topLeft());
+    window_vr_->resize(vr_rect_.size());
+    window_vr_->raise();
+  }
+  else
+  {
+    window_axial_->move(offScreen);
+    window_sagittal_->move(offScreen);
+    window_coronal_->move(offScreen);
+    window_vr_->move(offScreen);
+    window_vr_zoom_3d_->move(offScreen);
+  }
 	/*bool visible_at_maximized_vr = !(maximized_view_type_ == MaximizedViewType::VR && hide_mpr_views_on_maximized_vr_layout_);
 
 	bool coronal_visible = !task_tool_->IsZoom3DOn() && visible && visible_at_maximized_vr;
@@ -809,18 +814,42 @@ void CW3MPRtab::TaskZoom3D(bool bToggled)
 	const auto &event_common_handler = EventHandler::GetInstance()->GetCommonEventHandle();
 	event_common_handler.EmitSigSetTabSlotLayout(tab_layout_);
 
-	if (is_visible_)
-	{
-		bool is_zoom_3d_on = task_tool_->IsZoom3DOn();
-		window_coronal_->setVisible(!is_zoom_3d_on);
-		m_pMPRViewMgr->setVisibleMPRView(MPRViewType::CORONAL, !is_zoom_3d_on);
-		if (!is_zoom_3d_on)
-		{
-			m_pMPRViewMgr->updateImageOnViewPlane(MPRViewType::CORONAL);
-		}
-		window_vr_zoom_3d_->setVisible(is_zoom_3d_on);
-		m_pMPRViewMgr->setVisibleZoomView(is_zoom_3d_on);
-	}
+  if (is_visible_)
+  {
+    bool is_zoom_3d_on = task_tool_->IsZoom3DOn();
+
+    // window_coronal_->setVisible(!is_zoom_3d_on);
+    // m_pMPRViewMgr->setVisibleMPRView(MPRViewType::CORONAL, !is_zoom_3d_on);
+    const QPoint offScreen(-10000, -10000);
+    if (is_zoom_3d_on)
+    {
+      window_coronal_->move(offScreen);
+    }
+    else
+    {
+      window_coronal_->move(coronal_rect_.topLeft());
+      window_coronal_->resize(coronal_rect_.size());
+      window_coronal_->raise();
+    }
+
+    if (!is_zoom_3d_on)
+    {
+      m_pMPRViewMgr->updateImageOnViewPlane(MPRViewType::CORONAL);
+    }
+
+    // window_vr_zoom_3d_->setVisible(is_zoom_3d_on);
+    // m_pMPRViewMgr->setVisibleZoomView(is_zoom_3d_on);
+    if (is_zoom_3d_on)
+    {
+      window_vr_zoom_3d_->move(vr_zoom_3d_rect_.topLeft());
+      window_vr_zoom_3d_->resize(vr_zoom_3d_rect_.size());
+      window_vr_zoom_3d_->raise();
+    }
+    else
+    {
+      window_vr_zoom_3d_->move(offScreen);
+    }
+  }
 
 	m_pMPRViewMgr->TaskZoom3D(bToggled);
 
