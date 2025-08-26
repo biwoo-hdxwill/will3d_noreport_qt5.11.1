@@ -295,10 +295,10 @@ bool CW3Implant::implantLoadforPreviewWIM(const QString& manufacturer_name,
 	}
 	else if (manufacturer_name_.compare("IBS", Qt::CaseInsensitive) == 0 ||
 		manufacturer_name_.compare("IBS Implant", Qt::CaseInsensitive) == 0)
-	//else if (manufacturer_name_.compare("IBS Implant", Qt::CaseInsensitive) == 0)
 	{
 		QString implant_name = QFileInfo(flie_name).fileName();
-		if (implant_name.contains("M3", Qt::CaseInsensitive))
+    QString implant_path = QFileInfo(flie_name).filePath();
+		if (implant_name.contains("M3", Qt::CaseInsensitive) || implant_path.contains("/Magicore/", Qt::CaseInsensitive))
 		{
 			m_rotateDirection = glm::mat3(1.0f);
 		}

@@ -660,10 +660,10 @@ glm::mat3 ImplantResource::GetImplantModelRotate(
 	}
 	else if (manufacturer.compare("IBS", Qt::CaseInsensitive) == 0 ||
 		manufacturer.compare("IBS Implant", Qt::CaseInsensitive) == 0)
-		//else if (manufacturer.compare("IBS Implant", Qt::CaseInsensitive) == 0)
 	{
 		QString implant_name = QFileInfo(implant_file_path).fileName();
-		if (implant_name.contains("M3", Qt::CaseInsensitive))
+    QString implant_path = QFileInfo(implant_file_path).filePath();
+		if (implant_name.contains("M3", Qt::CaseInsensitive) || implant_path.contains("/Magicore/", Qt::CaseInsensitive))
 		{
 			return glm::mat3(1.0f);
 		}
