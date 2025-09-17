@@ -258,20 +258,7 @@ bool CW3Implant::implantLoadforPreviewWIM(const QString& manufacturer_name,
 	fileSTL.close();
 
 	// rotate direction
-	if (manufacturer_name_.compare("DIO", Qt::CaseInsensitive) == 0) 
-	{
-		QStringList listFilePath = flie_name.split('/');
-		QString fileName = listFilePath.at(listFilePath.size() - 1);
-		if (product_name_.compare("UF II", Qt::CaseInsensitive) == 0 && fileName.toLower().contains("n"))
-		{
-			m_rotateDirection = glm::mat3(glm::rotate(glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
-		}
-		else
-		{
-			m_rotateDirection = glm::mat3(1.0f);
-		}
-	} 
-	else if (manufacturer_name_.compare("MEGAGEN", Qt::CaseInsensitive) == 0) 
+	if (manufacturer_name_.compare("MEGAGEN", Qt::CaseInsensitive) == 0) 
 	{
 		if (product_name.contains("ST", Qt::CaseInsensitive))
 		{
@@ -284,10 +271,7 @@ bool CW3Implant::implantLoadforPreviewWIM(const QString& manufacturer_name,
 	} 
 	else if (manufacturer_name_.compare("Neobiotech", Qt::CaseInsensitive) == 0 ||
 		manufacturer_name_.compare("NeoImplant", Qt::CaseInsensitive) == 0 ||
-		manufacturer_name_.compare("DENTIS", Qt::CaseInsensitive) == 0 ||
-		manufacturer_name_.compare("Shinhung", Qt::CaseInsensitive) == 0 ||
 		manufacturer_name_.compare("Uris", Qt::CaseInsensitive) == 0 ||
-		manufacturer_name_.compare("Biotem Implant", Qt::CaseInsensitive) == 0 ||
 		manufacturer_name_.compare("Warantec", Qt::CaseInsensitive) == 0 || 
     manufacturer_name_.compare("ZimVie", Qt::CaseInsensitive) == 0)
 	{
@@ -315,6 +299,110 @@ bool CW3Implant::implantLoadforPreviewWIM(const QString& manufacturer_name,
 	{
 		m_rotateDirection = glm::mat3(1.0f);
 	}
+  else if (manufacturer_name_.compare("3P Implafavourite", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("3i", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("AB Dental", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("ADIN", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("ARDS", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Alfa Gate", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Alpha-Bio Tec", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("AlphaTech", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Anker", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Anthogyr", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Argon Medical", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("B&B Dental", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("BEGO Implant Systems", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("BioHorizons", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("BioMaterials", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biodent", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biodenta", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biogenesis", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biomate", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biotech Dental", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Biotem Implant", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Brainbase", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Bredent", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("C-TECH", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Camlog", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Cowellmedi", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Cybermed", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("DIO", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("DMI Technology", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentack", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentaurum", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentegris", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentis", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentium", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Dentsply", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Ditron Dental", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Duravit", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("ETGAR", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Easy Implant", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Euroteknika", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Friadent", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("GC", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Glidewell", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("HIOSSEN", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Hager & Meisinger GmbH", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("IDI Evolution", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("INTRA-LOCK", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("ISOMED", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("IZEN", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Implant Direct", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Implants Diffusion International", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("J Dental Care", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("KAT", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Kentec", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Keystone Dental", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Kyocera", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("LASAK", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("MIS", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Maxillent", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Medentika", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Medical-Production", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Neodent", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Neoss", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Nobel Biocare", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Noris", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("P-I", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("PALTOP", Qt::CaseInsensitive) == 0 || 
+    manufacturer_name_.compare("Platon Japan", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Prodent", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Rex Implants", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Ritter Implants", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("SDS Swiss Dental Solutions AG", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("SIC", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("SNUC", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Shinhung", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Sweden&Martina", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("TAG Dental", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("TBR Group", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Ticare Implants", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("TruAbutment", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Victory", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Zest", Qt::CaseInsensitive) == 0 ||
+    manufacturer_name_.compare("Zimmer Dental", Qt::CaseInsensitive) == 0)
+  {
+    // 20250912 integrate new implant data
+    if (manufacturer_name_.compare("Anker", Qt::CaseInsensitive) == 0)
+    {
+      QString implant_path = QFileInfo(flie_name).filePath();
+      if (implant_path.contains("Anker/Implant/SB-I/", Qt::CaseInsensitive) ||
+        implant_path.contains("Anker/Implant/SB-II/", Qt::CaseInsensitive) ||
+        implant_path.contains("Anker/Implant/SB-III/", Qt::CaseInsensitive))
+      {
+        m_rotateDirection = glm::mat3(glm::rotate(glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+      }
+      else
+      {
+        m_rotateDirection = glm::mat3(1.0f);
+      }
+    }
+    else
+    {
+      m_rotateDirection = glm::mat3(glm::rotate(glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f)));
+    }
+  }
 
 	////sort rotate direction.
 	glm::vec3 rotDir = m_rotateDirection * glm::vec3(0.0f, 0.0f, 1.0f);
